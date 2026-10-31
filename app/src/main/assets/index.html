@@ -1,0 +1,2047 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#1d2330"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>خريطة نطاق المكتب</title>
+<script>document.documentElement.setAttribute('dir','rtl');document.documentElement.setAttribute('lang','ar');</script>
+<style>
+/* Leaflet core styles (inlined) */
+.leaflet-pane,.leaflet-tile,.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-tile-container,.leaflet-pane>svg,.leaflet-pane>canvas,.leaflet-zoom-box,.leaflet-image-layer,.leaflet-layer{position:absolute;left:0;top:0}
+.leaflet-container{overflow:hidden;background:#ddd;outline-offset:1px;-webkit-tap-highlight-color:transparent;font-size:12px;line-height:1.5}
+.leaflet-tile,.leaflet-marker-icon,.leaflet-marker-shadow{user-select:none;-webkit-user-drag:none}
+.leaflet-tile::selection{background:transparent}
+.leaflet-marker-icon,.leaflet-marker-shadow{display:block}
+.leaflet-container .leaflet-overlay-pane svg{max-width:none!important;max-height:none!important}
+.leaflet-container .leaflet-marker-pane img,.leaflet-container .leaflet-shadow-pane img,.leaflet-container .leaflet-tile-pane img,.leaflet-container img.leaflet-image-layer,.leaflet-container .leaflet-tile{max-width:none!important;max-height:none!important;width:auto;padding:0}
+.leaflet-container.leaflet-touch-zoom{touch-action:pan-x pan-y}
+.leaflet-container.leaflet-touch-drag{touch-action:none;touch-action:pinch-zoom}
+.leaflet-container.leaflet-touch-drag.leaflet-touch-zoom{touch-action:none}
+.leaflet-tile{filter:inherit;visibility:hidden}
+.leaflet-tile-loaded{visibility:inherit}
+.leaflet-zoom-box{width:0;height:0;box-sizing:border-box;z-index:800;border:2px dotted #38f;background:rgba(255,255,255,.5)}
+.leaflet-pane{z-index:400}
+.leaflet-tile-pane{z-index:200}
+.leaflet-overlay-pane{z-index:400}
+.leaflet-shadow-pane{z-index:500}
+.leaflet-marker-pane{z-index:600}
+.leaflet-tooltip-pane{z-index:650}
+.leaflet-popup-pane{z-index:700}
+.leaflet-map-pane canvas{z-index:100}
+.leaflet-map-pane svg{z-index:200}
+.leaflet-control{position:relative;z-index:800;pointer-events:auto;float:left;clear:both}
+.leaflet-top,.leaflet-bottom{position:absolute;z-index:1000;pointer-events:none}
+.leaflet-top{top:0}.leaflet-right{right:0}.leaflet-bottom{bottom:0}.leaflet-left{left:0}
+.leaflet-right .leaflet-control{float:right;margin-right:10px}
+.leaflet-top .leaflet-control{margin-top:10px}
+.leaflet-bottom .leaflet-control{margin-bottom:10px}
+.leaflet-left .leaflet-control{margin-left:10px}
+.leaflet-fade-anim .leaflet-popup{opacity:0;transition:opacity .2s linear}
+.leaflet-fade-anim .leaflet-map-pane .leaflet-popup{opacity:1}
+.leaflet-zoom-animated{transform-origin:0 0}
+svg.leaflet-zoom-animated{will-change:transform}
+.leaflet-zoom-anim .leaflet-zoom-animated{transition:transform .25s cubic-bezier(0,0,.25,1)}
+.leaflet-zoom-anim .leaflet-tile,.leaflet-pan-anim .leaflet-tile{transition:none}
+.leaflet-zoom-anim .leaflet-zoom-hide{visibility:hidden}
+.leaflet-interactive{cursor:pointer}
+.leaflet-grab{cursor:grab}
+.leaflet-dragging .leaflet-grab,.leaflet-dragging .leaflet-grab .leaflet-interactive,.leaflet-dragging .leaflet-marker-draggable{cursor:grabbing}
+.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-image-layer,.leaflet-pane>svg path,.leaflet-tile-container{pointer-events:none}
+.leaflet-marker-icon.leaflet-interactive,.leaflet-image-layer.leaflet-interactive,.leaflet-pane>svg path.leaflet-interactive,svg.leaflet-image-layer.leaflet-interactive path{pointer-events:auto}
+.leaflet-container a{color:#0078A8;-webkit-tap-highlight-color:rgba(51,181,229,.4)}
+.leaflet-bar{box-shadow:0 1px 5px rgba(0,0,0,.65);border-radius:4px}
+.leaflet-bar a{background-color:#fff;border-bottom:1px solid #ccc;width:26px;height:26px;line-height:26px;display:block;text-align:center;text-decoration:none;color:#000;background-position:50% 50%;background-repeat:no-repeat}
+.leaflet-bar a:hover,.leaflet-bar a:focus{background-color:#f4f4f4}
+.leaflet-bar a:first-child{border-top-left-radius:4px;border-top-right-radius:4px}
+.leaflet-bar a:last-child{border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-bottom:none}
+.leaflet-bar a.leaflet-disabled{cursor:default;background-color:#f4f4f4;color:#bbb}
+.leaflet-control-zoom-in,.leaflet-control-zoom-out{font:bold 18px 'Lucida Console',Monaco,monospace;text-indent:1px}
+.leaflet-touch .leaflet-bar a{width:30px;height:30px;line-height:30px}
+.leaflet-touch .leaflet-control-zoom-in,.leaflet-touch .leaflet-control-zoom-out{font-size:22px}
+.leaflet-touch .leaflet-bar{border:2px solid rgba(0,0,0,.2);background-clip:padding-box;box-shadow:none}
+.leaflet-control-layers{box-shadow:0 1px 5px rgba(0,0,0,.4);background:#fff;border-radius:5px}
+.leaflet-control-layers-toggle{display:block;width:36px;height:36px;background-repeat:no-repeat;background-position:50% 50%;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 26 26'%3E%3Cpath fill='none' stroke='%23333' stroke-width='2' stroke-linejoin='round' d='M13 4 3 9l10 5 10-5zM3 13l10 5 10-5M3 17l10 5 10-5'/%3E%3C/svg%3E")}
+.leaflet-touch .leaflet-control-layers-toggle{width:44px;height:44px}
+.leaflet-touch .leaflet-control-layers{border:2px solid rgba(0,0,0,.2);background-clip:padding-box;box-shadow:none}
+.leaflet-control-layers .leaflet-control-layers-list,.leaflet-control-layers-expanded .leaflet-control-layers-toggle{display:none}
+.leaflet-control-layers-expanded .leaflet-control-layers-list{display:block;position:relative}
+.leaflet-control-layers-expanded{padding:6px 10px 6px 6px;color:#333;background:#fff}
+.leaflet-control-layers-selector{margin-top:2px;position:relative;top:1px}
+.leaflet-control-layers label{display:block;font-size:13px}
+.leaflet-control-layers-separator{height:0;border-top:1px solid #ddd;margin:5px -10px 5px -6px}
+.leaflet-container .leaflet-control-attribution{background:rgba(255,255,255,.8);margin:0}
+.leaflet-control-attribution,.leaflet-control-scale-line{padding:0 5px;color:#333;line-height:1.4}
+.leaflet-control-attribution a{text-decoration:none}
+.leaflet-attribution-flag{display:inline!important;vertical-align:baseline!important;width:1em;height:.6669em}
+.leaflet-left .leaflet-control-scale{margin-left:5px}
+.leaflet-bottom .leaflet-control-scale{margin-bottom:5px}
+.leaflet-control-scale-line{border:2px solid #777;border-top:none;line-height:1.1;padding:2px 5px 1px;white-space:nowrap;box-sizing:border-box;background:rgba(255,255,255,.8);text-shadow:1px 1px #fff}
+.leaflet-control-scale-line:not(:first-child){border-top:2px solid #777;border-bottom:none;margin-top:-2px}
+.leaflet-control-scale-line:not(:first-child):not(:last-child){border-bottom:2px solid #777}
+.leaflet-popup{position:absolute;text-align:center;margin-bottom:20px}
+.leaflet-popup-content-wrapper{padding:1px;text-align:left;border-radius:12px}
+.leaflet-popup-content{margin:13px 24px 13px 20px;line-height:1.3;font-size:13px;min-height:1px}
+.leaflet-popup-tip-container{width:40px;height:20px;position:absolute;left:50%;margin-top:-1px;margin-left:-20px;overflow:hidden;pointer-events:none}
+.leaflet-popup-tip{width:17px;height:17px;padding:1px;margin:-10px auto 0;pointer-events:auto;transform:rotate(45deg)}
+.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#fff;color:#333;box-shadow:0 3px 14px rgba(0,0,0,.4)}
+.leaflet-container a.leaflet-popup-close-button{position:absolute;top:0;right:0;border:none;text-align:center;width:24px;height:24px;font:16px/24px Tahoma,Verdana,sans-serif;color:#757575;text-decoration:none;background:transparent}
+.leaflet-container a.leaflet-popup-close-button:hover,.leaflet-container a.leaflet-popup-close-button:focus{color:#585858}
+.leaflet-popup-scrolled{overflow:auto}
+.leaflet-div-icon{background:#fff;border:1px solid #666}
+
+  :root{
+    --bg:#f5f6f8; --panel:#ffffff; --ink:#1d2330; --muted:#667085; --line:#e3e6ec;
+    --accent:#1f6feb; --danger:#d62828;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0}
+  body{font-family:"Segoe UI",Tahoma,"Noto Naskh Arabic",Arial,sans-serif;color:var(--ink);background:var(--bg);font-size:14px}
+  .app{display:grid;grid-template-columns:360px 1fr;height:100%}
+  aside{background:var(--panel);border-inline-end:1px solid var(--line);display:flex;flex-direction:column;min-height:0}
+  aside header{padding:14px 16px 10px;border-bottom:1px solid var(--line)}
+  aside h1{font-size:17px;margin:0 0 2px}
+  .titlerow{display:flex;gap:8px;align-items:center}
+  .titlerow h1{flex:1;word-break:break-word}
+  .titlerow input{flex:1;font-weight:700;font-size:15px}
+  [hidden]{display:none !important}
+  #printTitle{display:none}
+  aside header p{margin:0;color:var(--muted);font-size:12px;direction:ltr;text-align:right}
+  .tabs{display:flex;border-bottom:1px solid var(--line)}
+  .tabs button{flex:1;padding:10px;border:0;background:none;font:inherit;cursor:pointer;color:var(--muted);border-bottom:2px solid transparent}
+  .tabs button.on{color:var(--accent);border-bottom-color:var(--accent);font-weight:600}
+  .scroll{flex:1;overflow:auto;padding:12px 14px;min-height:0}
+  section.tab{display:none}
+  section.tab.on{display:block}
+  .box{border:1px solid var(--line);border-radius:10px;padding:10px;margin-bottom:12px;background:#fafbfc}
+  .box h2{font-size:13px;margin:0 0 8px}
+  label.f{display:block;font-size:12px;color:var(--muted);margin:6px 0 3px}
+  input[type=text],input[type=number],input[type=tel],textarea,select{
+    width:100%;padding:7px 9px;border:1px solid #cfd4dc;border-radius:7px;font:inherit;background:#fff;color:var(--ink)}
+  textarea{resize:vertical;min-height:60px}
+  input[type=color]{width:42px;height:32px;padding:0;border:1px solid #cfd4dc;border-radius:7px;background:#fff;cursor:pointer}
+  .row{display:flex;gap:8px;align-items:center}
+  .row>*{flex:1}
+  .row>.fixed{flex:none}
+  button.btn{padding:7px 12px;border:1px solid #cfd4dc;background:#fff;border-radius:7px;font:inherit;cursor:pointer;color:var(--ink)}
+  button.btn:hover{background:#f0f2f6}
+  button.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+  button.primary:hover{background:#1858bd}
+  button.danger{color:var(--danger);border-color:#efc2c2}
+  button.small{padding:4px 8px;font-size:12px}
+  .radio{display:flex;gap:14px;margin:8px 0;font-size:13px}
+  .radio label{display:flex;gap:5px;align-items:center;cursor:pointer}
+  details.circ{border:1px solid var(--line);border-radius:10px;margin-bottom:8px;background:#fff}
+  details.circ summary{list-style:none;display:flex;gap:8px;align-items:center;padding:8px 10px;cursor:pointer}
+  details.circ summary::-webkit-details-marker{display:none}
+  details.circ.flash{box-shadow:0 0 0 3px rgba(31,111,235,.35)}
+  .dot{width:14px;height:14px;border-radius:50%;flex:none;border:2px solid}
+  .ttl{flex:1;font-weight:600}
+  .sub{color:var(--muted);font-weight:400;font-size:12px}
+  .body{padding:2px 10px 10px;border-top:1px dashed var(--line)}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .hint{font-size:12px;color:var(--muted);margin:4px 0 0}
+  .pinrow{display:flex;gap:8px;align-items:center;padding:8px 10px;border:1px solid var(--line);border-radius:10px;margin-bottom:8px;background:#fff;cursor:pointer}
+  .pinrow:hover{background:#f6f9ff}
+  .pinrow .meta{flex:1;min-width:0}
+  .pinrow b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .pinrow span{color:var(--muted);font-size:12px}
+  .empty{color:var(--muted);text-align:center;padding:18px 6px}
+  .foot{padding:10px 14px;border-top:1px solid var(--line);display:flex;gap:6px;flex-wrap:wrap}
+  .mapwrap{position:relative;min-height:0}
+  #map{position:absolute;inset:0;direction:ltr;background-color:#eef1f5;
+    background-image:linear-gradient(#d9dee6 1px,transparent 1px),linear-gradient(90deg,#d9dee6 1px,transparent 1px);background-size:40px 40px}
+  #toast{position:absolute;z-index:1000;bottom:34px;left:50%;transform:translateX(-50%);background:#1d2330;color:#fff;padding:8px 14px;
+    border-radius:10px;font-size:13px;display:none;max-width:90%;direction:rtl;text-align:center;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+  #banner{position:absolute;z-index:1000;top:12px;left:50%;transform:translateX(-50%);background:#1d2330;color:#fff;
+    padding:8px 14px;border-radius:999px;font-size:13px;display:none;box-shadow:0 4px 14px rgba(0,0,0,.3);direction:rtl}
+  #banner button{margin-inline-start:10px;background:#fff;color:#1d2330;border:0;border-radius:999px;padding:2px 10px;cursor:pointer;font:inherit}
+  .map-crosshair{cursor:crosshair !important}
+  .map-crosshair .leaflet-interactive{cursor:crosshair !important}
+  /* pins and labels */
+  .pin{background:none;border:0}
+  .pin span{display:block;width:24px;height:24px;margin:4px 3px;background:#d62828;border:3px solid #fff;border-radius:50% 50% 50% 0;
+    transform:rotate(-45deg);box-shadow:0 2px 6px rgba(0,0,0,.45)}
+  .pin span::after{content:"";position:absolute;left:50%;top:50%;width:8px;height:8px;margin:-4px 0 0 -4px;background:#fff;border-radius:50%}
+  .office{background:none;border:0}
+  .office span{display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:#111;color:#ffd60a;
+    border:3px solid #fff;font-size:16px;box-shadow:0 2px 8px rgba(0,0,0,.5)}
+  .ring-label{background:none;border:0}
+  .ring-label span{display:inline-block;transform:translate(-50%,-50%);background:#fff;border:2px solid;border-radius:999px;
+    padding:0 7px;font:700 11px/18px Arial,sans-serif;white-space:nowrap;direction:ltr;box-shadow:0 1px 3px rgba(0,0,0,.25)}
+  /* popup card */
+  .leaflet-popup-content{direction:rtl;margin:12px 14px;font-family:inherit;font-size:14px}
+  .card h3{margin:0 0 8px;font-size:16px;padding-bottom:6px;border-bottom:2px solid #d62828}
+  .card dl{margin:0}
+  .card dt{font-size:11px;color:var(--muted);margin-top:7px}
+  .card dd{margin:1px 0 0;font-weight:600;white-space:pre-wrap;word-break:break-word}
+  .card dd a{color:var(--accent);text-decoration:none;direction:ltr;unicode-bidi:plaintext}
+  .card .dist{margin-top:10px;padding:6px 8px;background:#f1f5ff;border-radius:7px;font-size:12px;color:#244}
+  .card .acts{display:flex;gap:6px;margin-top:10px}
+  .card label{display:block;font-size:12px;color:var(--muted);margin:7px 0 3px}
+  input[type=date]{width:100%;padding:7px 9px;border:1px solid #cfd4dc;border-radius:7px;font:inherit;background:#fff;color:var(--ink)}
+  .card textarea{min-height:48px}
+  /* visits section */
+  #visitsView{display:none;min-height:100%;background:var(--bg)}
+  body.vis-mode{height:auto;overflow:auto}
+  body.vis-mode .app{display:none}
+  body.vis-mode #visitsView{display:block}
+  .vwrap{max-width:1280px;margin:0 auto;padding:16px}
+  .vhead{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-bottom:14px}
+  .vhead h1{margin:0;font-size:20px;flex:1}
+  .vfilter{display:flex;gap:8px;align-items:center}
+  .vfilter select{min-width:230px}
+  .vcard{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:14px}
+  .vcard h2{font-size:15px;margin:0 0 10px}
+  .vgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}
+  .vgrid label{display:block;font-size:12px;color:var(--muted);margin-bottom:3px}
+  .vgrid .span2{grid-column:1/-1}
+  .chk{display:flex;gap:6px;align-items:center;font-size:13px;margin:12px 0 4px}
+  .vbtns{display:flex;gap:8px;align-items:center;margin-top:10px}
+  #vMsg{color:#177245;font-size:13px}
+  .vtop{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+  .twrap{overflow:auto}
+  #vTable{border-collapse:collapse;width:100%;min-width:1150px;font-size:13px}
+  #vTable th,#vTable td{border:1px solid var(--line);padding:7px 9px;text-align:right;vertical-align:top}
+  #vTable th{background:#f1f4f9;white-space:nowrap}
+  #vTable td.ltr{direction:ltr;unicode-bidi:plaintext;white-space:nowrap}
+  #vTable td.wrap{white-space:pre-wrap;word-break:break-word;min-width:140px}
+  #vTable td.act{white-space:nowrap}
+  #vTable tr.editing td{background:#fff8e1}
+  @media (max-width:820px){
+    .app{grid-template-columns:1fr;grid-template-rows:55vh 45vh;height:auto}
+    .mapwrap{order:-1}
+    body{overflow:auto}
+    aside{border-inline-end:0;border-top:1px solid var(--line)}
+  }
+  @media print{
+    @page{size:A4 landscape;margin:8mm}
+    html,body{height:auto;background:#fff}
+    .app{display:block;height:auto}
+    aside,#banner,.leaflet-control-zoom,.leaflet-control-layers{display:none !important}
+    .mapwrap{height:190mm}
+    #printTitle{display:block;height:11mm;font:700 18px/11mm Tahoma,Arial,sans-serif;direction:rtl}
+    .mapwrap #map{top:11mm}
+    .vis-mode .app{display:none !important}
+    .vis-mode .vform,.vis-mode .vact,.vis-mode #vBack{display:none !important}
+    .vis-mode #visitsView{background:#fff}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+
+  /* in-page dialog and message bar (the viewer blocks alert / confirm) */
+  #dlg{position:fixed;inset:0;z-index:5000;background:rgba(20,24,34,.45);display:flex;align-items:center;justify-content:center;padding:16px}
+  .dbox{background:#fff;color:var(--ink);border-radius:12px;padding:16px;width:min(520px,100%);max-height:90%;overflow:auto;box-shadow:0 12px 40px rgba(0,0,0,.35)}
+  .dbox p{margin:0 0 12px;line-height:1.6}
+  .dbox textarea{width:100%;min-height:200px;direction:ltr;text-align:left;font:12px/1.5 Consolas,Menlo,monospace;margin-bottom:12px}
+  .dact{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-start}
+  #say{position:fixed;z-index:6000;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom, 0px));background:#1d2330;color:#fff;
+    padding:9px 16px;border-radius:10px;font-size:13px;max-width:92%;text-align:center;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+
+  .sync{margin-top:6px;font-size:12px;font-weight:600}
+  .sync.ok{color:#177245}.sync.warn{color:#9a6700}.sync.bad{color:#b42318}.sync.wait{color:var(--muted)}
+  .legacy{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:8px 14px;background:#fff8e1;border-bottom:1px solid var(--line);font-size:12px}
+  .legacy span{flex:1 1 100%}
+  #bgEditor input[type=file]{width:100%;font:inherit}
+  #bgEditor input[type=range]{width:100%}
+
+  #srchBox{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:min(440px,calc(100% - 130px));z-index:1100;direction:rtl}
+  #srchBox .bar{display:flex;gap:6px;background:#fff;border:2px solid rgba(0,0,0,.2);border-radius:10px;padding:4px;box-shadow:0 1px 5px rgba(0,0,0,.25)}
+  #srchBox input{flex:1;min-width:0;border:0;outline:0;font:inherit;font-size:14px;padding:6px 8px;background:transparent}
+  #srchBox button{border:0;background:#f0f2f6;border-radius:7px;padding:0 10px;font:inherit;font-size:16px;cursor:pointer;min-height:34px}
+  #srchBox button.go{background:#1f6feb;color:#fff;font-size:13px}
+  #srchRes{margin-top:4px;background:#fff;border:1px solid #cfd4dc;border-radius:10px;max-height:240px;overflow:auto;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+  #srchRes div{padding:9px 11px;border-bottom:1px solid #eef0f4;font-size:13px;cursor:pointer}
+  #srchRes div:last-child{border-bottom:0}
+  #srchRes div.msg{cursor:default;color:#667085}
+  @media print{#srchBox{display:none!important}}
+</style>
+<div class="app">
+  <aside>
+    <header>
+      <div class="titlerow" id="titleRow"><h1 id="mainTitle">خريطة نطاق المكتب - دمشق</h1><button class="btn small" id="editTitle" title="تعديل العنوان الرئيسي">✎ تعديل</button></div>
+      <p>33°31'26.4"N 36°17'48.8"E</p>
+      <div class="sync wait" id="syncBadge" role="status">جارٍ تحميل البيانات...</div>
+    </header>
+    <div class="legacy" id="legacyBox" hidden>
+      <span>توجد بيانات محفوظة سابقاً في هذا المتصفح (متاجر وزيارات).</span>
+      <button class="btn small primary" id="legacyBtn" type="button">استيرادها إلى التطبيق</button>
+      <button class="btn small" id="legacySkip" type="button">لاحقاً</button>
+    </div>
+    <div class="tabs">
+      <button data-tab="circles" class="on">الدوائر</button>
+      <button data-tab="pins">الدبابيس</button>
+      <button data-tab="bg">الخلفية</button>
+    </div>
+    <div class="scroll">
+      <section class="tab on" id="tab-circles">
+        <div class="box">
+          <h2>رسم دائرة جديدة</h2>
+          <div class="row">
+            <div>
+              <label class="f" for="newKm">نصف القطر (كم)</label>
+              <input type="number" id="newKm" min="0.1" step="0.1" value="11" inputmode="decimal">
+            </div>
+            <div class="fixed">
+              <label class="f" for="newColor">اللون</label>
+              <input type="color" id="newColor" value="#111111">
+            </div>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="ctr" value="office" checked> من موقع المكتب</label>
+            <label><input type="radio" name="ctr" value="click"> من نقطة أحددها بالنقر</label>
+          </div>
+          <button class="btn primary" id="addCircle" style="width:100%">رسم الدائرة</button>
+        </div>
+        <div class="row" style="margin-bottom:10px">
+          <button class="btn small" id="showAll">إظهار الكل</button>
+          <button class="btn small" id="hideAll">إخفاء الكل</button>
+          <button class="btn small" id="resetCircles">استعادة الدوائر 1-10</button>
+          <button class="btn small danger" id="delAll">حذف الكل</button>
+        </div>
+        <div id="circleList"></div>
+      </section>
+
+      <section class="tab" id="tab-pins">
+        <button class="btn primary" id="addPin" style="width:100%;margin-bottom:8px">+ إضافة دبوس (انقر على الخريطة)</button>
+        <button class="btn" id="openVisitsAll" style="width:100%;margin-bottom:8px">سجل الزيارات (كل المتاجر)</button>
+        <button class="btn" id="pinsCsv" style="width:100%;margin-bottom:10px">تصدير المتاجر CSV</button>
+        <input type="text" id="pinSearch" placeholder="بحث في الدبابيس..." style="margin-bottom:10px">
+        <div id="pinList"></div>
+      </section>
+
+      <section class="tab" id="tab-bg">
+        <div class="box">
+          <h2>صورة خلفية للخريطة</h2>
+          <p class="hint" id="bgNote"></p>
+          <div id="bgEditor">
+            <label class="f" for="bgFile">رفع صورة (خريطة أو صورة جوية للمنطقة)</label>
+            <input type="file" id="bgFile" accept="image/png,image/jpeg,image/webp">
+            <div class="grid2">
+              <div><label class="f" for="bgW">عرض الصورة (كم)</label><input type="number" id="bgW" min="0.5" max="500" step="0.1" inputmode="decimal"></div>
+              <div><label class="f" for="bgOp">الشفافية</label><input type="range" id="bgOp" min="0.05" max="1" step="0.05"></div>
+            </div>
+            <div class="grid2">
+              <div><label class="f" for="bgOx">إزاحة شرقاً (كم)</label><input type="number" id="bgOx" step="0.05" inputmode="decimal"></div>
+              <div><label class="f" for="bgOy">إزاحة شمالاً (كم)</label><input type="number" id="bgOy" step="0.05" inputmode="decimal"></div>
+            </div>
+            <button class="btn danger" id="bgRemove" type="button" style="margin-top:10px">إزالة الصورة</button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="foot">
+      <button class="btn small primary" id="pdfBtn">PDF / طباعة</button>
+      <button class="btn small" id="exportBtn">نسخة احتياطية</button>
+      <button class="btn small" id="importBtn">استيراد</button>
+      <input type="file" id="importFile" accept="application/json,.json" hidden>
+    </div>
+  </aside>
+  <div class="mapwrap">
+    <div id="printTitle"></div>
+    <div id="map"></div>
+    <div id="srchBox">
+      <div class="bar">
+        <button type="button" id="locBtn" title="موقعي الحالي" aria-label="موقعي الحالي">📍</button>
+        <input type="text" id="srchIn" placeholder="ابحث عن مكان أو أدخل إحداثيات..." enterkeyhint="search" autocomplete="off">
+        <button type="button" class="go" id="srchGo">بحث</button>
+      </div>
+      <div id="srchRes" hidden></div>
+    </div>
+    <div id="toast"></div>
+    <div id="banner"><span id="bannerText"></span><button id="bannerCancel">إلغاء</button></div>
+  </div>
+</div>
+
+<div id="visitsView">
+  <div class="vwrap">
+    <div class="vhead">
+      <button class="btn" id="vBack">&#8617; العودة إلى الخريطة</button>
+      <h1>سجل الزيارات</h1>
+      <div class="vfilter"><label for="vPin">المتجر</label><select id="vPin"></select></div>
+    </div>
+
+    <div class="vcard vform" id="vFormWrap">
+      <h2 id="vFormTitle">إضافة زيارة جديدة</h2>
+      <form id="vForm" novalidate>
+        <div class="vgrid">
+          <div><label for="vf-no">رقم الزيارة</label><input type="number" id="vf-no" min="1" step="1" inputmode="numeric"></div>
+          <div><label for="vf-date">تاريخ الزيارة</label><input type="date" id="vf-date"></div>
+          <div><label for="vf-store">اسم المتجر</label><input type="text" id="vf-store" maxlength="200"></div>
+          <div><label for="vf-owner">صاحب المتجر</label><input type="text" id="vf-owner" maxlength="200"></div>
+          <div><label for="vf-phone">الرقم</label><input type="tel" id="vf-phone" maxlength="60" dir="ltr" style="text-align:right"></div>
+          <div><label for="vf-type">نوع العميل</label>
+            <select id="vf-type"><option value="">— اختر —</option><option value="new">عميل جديد</option><option value="old">عميل قديم</option></select></div>
+          <div><label for="vf-lastInv">تاريخ آخر فاتورة</label><input type="date" id="vf-lastInv"></div>
+          <div><label for="vf-invoice">قيمة الفاتورة (USD)</label><input type="number" id="vf-invoice" min="0" step="0.01" inputmode="decimal"></div>
+          <div class="span2"><label for="vf-purchases">المشتريات</label><textarea id="vf-purchases" maxlength="1000" rows="2"></textarea></div>
+          <div class="span2"><label for="vf-address">العنوان</label><input type="text" id="vf-address" maxlength="300"></div>
+          <div class="span2"><label for="vf-notes">الملاحظات</label><textarea id="vf-notes" maxlength="2000" rows="2"></textarea></div>
+        </div>
+        <label class="chk"><input type="checkbox" id="vf-sync" checked> تحديث بطاقة المتجر على الخريطة بهذه القيم (الحقول المعبّأة فقط، بدون الملاحظات)</label>
+        <div class="vbtns">
+          <button type="submit" class="btn primary" id="vSave">إضافة إلى الجدول</button>
+          <button type="button" class="btn" id="vCancel" style="display:none">إلغاء التعديل</button>
+          <span id="vMsg"></span>
+        </div>
+      </form>
+    </div>
+    <div class="vcard vform" id="vHint" style="display:none;color:var(--muted)">اختر متجراً من القائمة أعلاه لإضافة زيارة جديدة. الجدول أدناه يعرض زيارات كل المتاجر.</div>
+
+    <div class="vcard">
+      <div class="vtop">
+        <b id="vCount"></b>
+        <span class="vact"><button class="btn small" id="vCsv">تصدير CSV</button> <button class="btn small" id="vPdf">PDF / طباعة</button></span>
+      </div>
+      <div class="twrap">
+        <table id="vTable">
+          <thead><tr>
+            <th>رقم الزيارة</th><th>تاريخ الزيارة</th><th>اسم المتجر</th><th>صاحب المتجر</th><th>الرقم</th><th>نوع العميل</th>
+            <th>تاريخ آخر فاتورة</th><th>المشتريات</th><th>قيمة الفاتورة (USD)</th><th>العنوان</th><th>الملاحظات</th><th class="vact"></th>
+          </tr></thead>
+          <tbody id="vBody"></tbody>
+        </table>
+      </div>
+      <div class="empty" id="vEmpty"></div>
+    </div>
+  </div>
+</div>
+
+<div id="dlg" hidden>
+  <div class="dbox" role="dialog" aria-modal="true" aria-labelledby="dlgMsg">
+    <p id="dlgMsg"></p>
+    <textarea id="dlgText" hidden spellcheck="false"></textarea>
+    <div class="dact" id="dlgBtns"></div>
+  </div>
+</div>
+<div id="say" hidden role="status"></div>
+<script src="leaflet.js"></script>
+<script>window.L||document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"><\/script>')</script>
+<script>/* ===== التخزين المحلي التلقائي (بديل البيانات المشتركة) ===== */
+(function(){
+  'use strict';
+  var LS_KEY = 'office-map-data-v2', DB_NAME = 'office-map-db';
+  var KINDS = ['circles','pins','visits','settings'];
+  var data = null, blobs = {}, urls = {}, idb = null, dirty = false, timer = null, loadP = null;
+
+  function emptyData(){ return {t:0, circles:{}, pins:{}, visits:{}, settings:{}}; }
+  function seed(){
+    var d = emptyData(), P = ['#e63946','#f4722b','#f4a261','#d4a017','#7cb518','#2a9d8f','#0096c7','#4361ee','#7209b7','#b5179e'];
+    for(var i=1;i<=10;i++) d.circles['c'+i] = {name:'', km:i, color:P[i-1], weight:2, fillOpacity:0.04, dashed:false, visible:true, center:null};
+    return d;
+  }
+  function clone(o){ return JSON.parse(JSON.stringify(o)); }
+
+  function openIdb(){
+    return new Promise(function(res){
+      try{
+        var r = indexedDB.open(DB_NAME, 1);
+        r.onupgradeneeded = function(){ var d = r.result; d.createObjectStore('kv'); d.createObjectStore('blobs'); };
+        r.onsuccess = function(){ res(r.result); };
+        r.onerror = function(){ res(null); };
+      }catch(e){ res(null); }
+    });
+  }
+  function idbGet(store, key){
+    return new Promise(function(res){
+      if(!idb) return res(undefined);
+      try{ var q = idb.transaction(store).objectStore(store).get(key); q.onsuccess = function(){ res(q.result); }; q.onerror = function(){ res(undefined); }; }
+      catch(e){ res(undefined); }
+    });
+  }
+  function idbAll(store){
+    return new Promise(function(res){
+      if(!idb) return res([]);
+      try{
+        var out = [], q = idb.transaction(store).objectStore(store).openCursor();
+        q.onsuccess = function(){ var c = q.result; if(c){ out.push([c.key, c.value]); c.continue(); } else res(out); };
+        q.onerror = function(){ res(out); };
+      }catch(e){ res(out); }
+    });
+  }
+  function idbPut(store, key, val){
+    return new Promise(function(res){
+      if(!idb) return res(false);
+      try{ var tx = idb.transaction(store, 'readwrite'); tx.objectStore(store).put(val, key); tx.oncomplete = function(){ res(true); }; tx.onerror = tx.onabort = function(){ res(false); }; }
+      catch(e){ res(false); }
+    });
+  }
+  function idbDel(store, key){
+    return new Promise(function(res){
+      if(!idb) return res(false);
+      try{ var tx = idb.transaction(store, 'readwrite'); tx.objectStore(store).delete(key); tx.oncomplete = function(){ res(true); }; tx.onerror = tx.onabort = function(){ res(false); }; }
+      catch(e){ res(false); }
+    });
+  }
+
+  function load(){
+    if(loadP) return loadP;
+    loadP = openIdb().then(function(d){
+      idb = d;
+      return idbGet('kv', 'data');
+    }).then(function(fromIdb){
+      var fromLs = null;
+      try{ var raw = localStorage.getItem(LS_KEY); if(raw) fromLs = JSON.parse(raw); }catch(e){}
+      var best = null;
+      [fromIdb, fromLs].forEach(function(x){ if(x && typeof x === 'object' && x.circles && x.pins && (!best || (x.t||0) > (best.t||0))) best = x; });
+      data = best || seed();
+      KINDS.forEach(function(k){ if(!data[k]) data[k] = {}; });
+      if(!best) { dirty = true; persist(); }
+      return idbAll('blobs');
+    }).then(function(rows){
+      rows.forEach(function(r){ blobs[r[0]] = r[1]; try{ urls[r[0]] = URL.createObjectURL(r[1]); }catch(e){} });
+      return true;
+    });
+    return loadP;
+  }
+
+  function persist(){
+    if(!dirty || !data) return Promise.resolve();
+    dirty = false;
+    data.t = Date.now();
+    var snap = clone(data);
+    try{ localStorage.setItem(LS_KEY, JSON.stringify(snap)); }catch(e){}
+    return idbPut('kv', 'data', snap);
+  }
+  function schedule(){ dirty = true; clearTimeout(timer); timer = setTimeout(persist, 60); }
+  window.__officeFlush = function(){ clearTimeout(timer); return persist(); };
+  document.addEventListener('visibilitychange', function(){ if(document.hidden) setTimeout(window.__officeFlush, 0); });
+  window.addEventListener('pagehide', function(){ setTimeout(window.__officeFlush, 0); });
+
+  /* ---- db ---- */
+  function snapOf(kind){
+    var docs = Object.keys(data[kind]).map(function(id){
+      var v = clone(data[kind][id]);
+      return {id:id, exists:true, data:function(){ return clone(v); }};
+    });
+    return {docs:docs, metadata:{fromCache:false}};
+  }
+  var db = {
+    collection: function(kind){
+      return {
+        doc: function(id){
+          return {
+            set: function(v){ data[kind][id] = clone(v); schedule(); return Promise.resolve(); },
+            delete: function(){ delete data[kind][id]; schedule(); return Promise.resolve(); }
+          };
+        },
+        onSnapshot: function(cb){ setTimeout(function(){ cb(snapOf(kind)); }, 0); return function(){}; }
+      };
+    },
+    doc: function(path){
+      var p = path.split('/'), kind = p[0], id = p[1];
+      return {
+        onSnapshot: function(cb){
+          setTimeout(function(){
+            var has = data[kind] && (id in data[kind]);
+            cb({id:id, exists:has, data:function(){ return has ? clone(data[kind][id]) : undefined; }});
+          }, 0);
+          return function(){};
+        }
+      };
+    }
+  };
+
+  /* ---- assets (صورة الخلفية) ---- */
+  function hex32(){
+    var a = new Uint8Array(16); (window.crypto || window.msCrypto).getRandomValues(a);
+    return Array.prototype.map.call(a, function(b){ return ('0' + b.toString(16)).slice(-2); }).join('');
+  }
+  var assets = {
+    upload: function(file){
+      var id = hex32();
+      blobs[id] = file;
+      try{ urls[id] = URL.createObjectURL(file); }catch(e){}
+      return idbPut('blobs', id, file).then(function(){ return {id:id}; });
+    },
+    delete: function(id){
+      if(urls[id]){ try{ URL.revokeObjectURL(urls[id]); }catch(e){} }
+      delete urls[id]; delete blobs[id];
+      return idbDel('blobs', id);
+    }
+  };
+  window.__blobUrl = function(id){ return urls[id] || ''; };
+
+  /* ---- حفظ الملفات (PDF / CSV / نسخة احتياطية) ---- */
+  function toBase64(data){
+    return new Promise(function(res, rej){
+      var blob = (typeof data === 'string') ? new Blob([data], {type:'text/plain;charset=utf-8'}) : data;
+      var r = new FileReader();
+      r.onload = function(){ res({b64:String(r.result).split(',')[1] || '', blob:blob}); };
+      r.onerror = function(){ rej(new Error('read')); };
+      r.readAsDataURL(blob);
+    });
+  }
+  function mimeOf(name){
+    if(/\.pdf$/i.test(name)) return 'application/pdf';
+    if(/\.csv$/i.test(name)) return 'text/csv';
+    if(/\.json$/i.test(name)) return 'application/json';
+    return 'application/octet-stream';
+  }
+  var downloads = {
+    save: function(o){
+      return toBase64(o.data).then(function(x){
+        if(window.AndroidBridge && window.AndroidBridge.saveFile){
+          var ok = window.AndroidBridge.saveFile(o.filename, x.b64, mimeOf(o.filename));
+          if(!ok) throw new Error('save');
+          return;
+        }
+        var a = document.createElement('a');
+        a.href = URL.createObjectURL(new Blob([x.blob], {type:mimeOf(o.filename)}));
+        a.download = o.filename; document.body.appendChild(a); a.click();
+        setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 2000);
+      });
+    }
+  };
+
+  var user = { can: function(){ return Promise.resolve(true); } };
+
+  window.claude = {
+    use: function(name){
+      return load().then(function(){
+        if(name === 'db') return db;
+        if(name === 'user') return user;
+        if(name === 'downloads') return downloads;
+        if(name === 'assets') return assets;
+        return null;
+      });
+    }
+  };
+})();
+</script>
+<script>(function(){
+  'use strict';
+  var OFFICE = [33.524, 36.296889]; // 33°31'26.4"N 36°17'48.8"E
+  var PALETTE = ['#e63946','#f4722b','#f4a261','#d4a017','#7cb518','#2a9d8f','#0096c7','#4361ee','#7209b7','#b5179e'];
+  var DEFAULT_TITLE = 'خريطة نطاق المكتب - دمشق';
+  var LEGACY_KEY = 'office-radius-map-v1';
+  var KM_LAT = 110.574;
+  var KM_LNG = 111.32 * Math.cos(OFFICE[0] * Math.PI / 180);
+
+  function $(id){ return document.getElementById(id); }
+  function h(tag, attrs, kids){
+    var el = document.createElement(tag);
+    if(attrs) Object.keys(attrs).forEach(function(k){
+      if(k === 'class') el.className = attrs[k];
+      else if(k === 'text') el.textContent = attrs[k];
+      else if(k.indexOf('on') === 0) el.addEventListener(k.slice(2), attrs[k]);
+      else if(attrs[k] !== null && attrs[k] !== undefined) el.setAttribute(k, attrs[k]);
+    });
+    (kids||[]).forEach(function(c){ if(c) el.appendChild(typeof c === 'string' ? document.createTextNode(c) : c); });
+    return el;
+  }
+  function num(v, d){ v = parseFloat(v); return isFinite(v) ? v : d; }
+  function clamp(v, a, b){ return Math.min(b, Math.max(a, v)); }
+  function cleanDate(v){ v = String(v||''); return /^\d{4}-\d{2}-\d{2}$/.test(v) ? v : ''; }
+  function cleanMoney(v){
+    if(v === null || v === undefined || String(v).trim() === '') return null;
+    v = parseFloat(v);
+    return (isFinite(v) && v >= 0 && v < 1e12) ? Math.round(v*100)/100 : null;
+  }
+  function todayStr(){
+    var d = new Date();
+    return d.getFullYear() + '-' + ('0'+(d.getMonth()+1)).slice(-2) + '-' + ('0'+d.getDate()).slice(-2);
+  }
+  function typeLabel(t){ return t === 'new' ? 'عميل جديد' : (t === 'old' ? 'عميل قديم' : '-'); }
+  function fmtUsd(v){ return (v === null || v === undefined) ? '-' : Number(v).toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2}) + ' USD'; }
+  function fmtKm(v){ return (Math.round(v*100)/100).toString(); }
+  function newId(){ return 'x' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8); }
+  function cleanId(x){ return String(x == null ? '' : x).replace(/[^A-Za-z0-9_\-]/g, '').slice(0, 60); }
+  function ser(v){
+    if(Array.isArray(v)) return '[' + v.map(ser).join(',') + ']';
+    if(v && typeof v === 'object') return '{' + Object.keys(v).sort().map(function(k){ return JSON.stringify(k) + ':' + ser(v[k]); }).join(',') + '}';
+    return JSON.stringify(v === undefined ? null : v);
+  }
+  function body(o){
+    var b = {};
+    Object.keys(o).forEach(function(k){ if(k !== 'id' && k.charAt(0) !== '_') b[k] = o[k]; });
+    return b;
+  }
+
+  /* ---------- model cleaners (used for remote data, imports, legacy data) ---------- */
+  function cleanCircle(c, id){
+    c = c || {};
+    var km = num(c.km, 0); if(!(km > 0)) return null;
+    var ctr = null;
+    if(Array.isArray(c.center) && isFinite(c.center[0]) && isFinite(c.center[1])) ctr = [+c.center[0], +c.center[1]];
+    return {id:id, name:String(c.name||'').slice(0,60), km:km,
+      color:/^#[0-9a-f]{6}$/i.test(c.color) ? c.color : '#111111',
+      weight:clamp(num(c.weight,2),1,10), fillOpacity:clamp(num(c.fillOpacity,0.04),0,0.6),
+      dashed:!!c.dashed, visible:c.visible !== false, center:ctr};
+  }
+  function cleanPin(p, id){
+    p = p || {};
+    if(!isFinite(p.lat) || !isFinite(p.lng)) return null;
+    return {id:id, lat:+p.lat, lng:+p.lng,
+      store:String(p.store||'').slice(0,200), owner:String(p.owner||'').slice(0,200),
+      phone:String(p.phone||'').slice(0,60), notes:String(p.notes||'').slice(0,2000),
+      type:(p.type === 'new' || p.type === 'old') ? p.type : '', lastInvoice:cleanDate(p.lastInvoice),
+      purchases:String(p.purchases||'').slice(0,1000), invoice:cleanMoney(p.invoice)};
+  }
+  function cleanVisit(v, id){
+    v = v || {};
+    var pid = cleanId(v.pinId); if(!pid) return null;
+    var no = parseInt(v.no, 10); if(!(no >= 1)) no = 1;
+    return {id:id, pinId:pid, no:no, date:cleanDate(v.date),
+      store:String(v.store||'').slice(0,200), owner:String(v.owner||'').slice(0,200), phone:String(v.phone||'').slice(0,60),
+      type:(v.type === 'new' || v.type === 'old') ? v.type : '', lastInvoice:cleanDate(v.lastInvoice),
+      purchases:String(v.purchases||'').slice(0,1000), invoice:cleanMoney(v.invoice),
+      address:String(v.address||'').slice(0,300), notes:String(v.notes||'').slice(0,2000)};
+  }
+  function cleanBg(b){
+    if(!b || !/^[0-9a-f]{32}$/.test(String(b.id||''))) return null;
+    return {id:b.id, w:clamp(num(b.w,20),0.5,500), ox:clamp(num(b.ox,0),-200,200), oy:clamp(num(b.oy,0),-200,200),
+      op:clamp(num(b.op,0.9),0.05,1), ar:clamp(num(b.ar,1),0.05,20)};
+  }
+  var CLEAN = {circles:cleanCircle, pins:cleanPin, visits:cleanVisit};
+
+  function defaultCircles(){
+    var arr = [];
+    for(var i=1;i<=10;i++) arr.push({id:'c'+i, name:'', km:i, color:PALETTE[i-1], weight:2, fillOpacity:0.04, dashed:false, visible:true, center:null});
+    return arr;
+  }
+
+  function sanitizeAll(s){
+    if(!s || !Array.isArray(s.circles) || !Array.isArray(s.pins)) throw new Error('bad');
+    var out = {title:String(s.title||'').slice(0,120), bg:cleanBg(s.bg), circles:[], pins:[], visits:[]};
+    var used = {c:{}, p:{}, v:{}}, pinMap = {};
+    s.circles.forEach(function(c){
+      var id = cleanId(c && c.id); if(!id || used.c[id]) id = newId(); used.c[id] = 1;
+      var o = cleanCircle(c, id); if(o) out.circles.push(o);
+    });
+    s.pins.forEach(function(p){
+      var id = cleanId(p && p.id); if(!id || used.p[id]) id = newId(); used.p[id] = 1;
+      var o = cleanPin(p, id); if(o){ out.pins.push(o); pinMap[String(p.id)] = id; }
+    });
+    (Array.isArray(s.visits) ? s.visits : []).forEach(function(v){
+      if(!v || pinMap[String(v.pinId)] === undefined) return;
+      var id = cleanId(v.id); if(!id || used.v[id]) id = newId(); used.v[id] = 1;
+      var o = cleanVisit(Object.assign({}, v, {pinId:pinMap[String(v.pinId)]}), id); if(o) out.visits.push(o);
+    });
+    return out;
+  }
+
+  function legacyData(){
+    try{
+      var raw = localStorage.getItem(LEGACY_KEY); if(!raw) return null;
+      var s = JSON.parse(raw);
+      var out = sanitizeAll({title:s.title, circles:[], pins:(s.pins||[]).map(function(p){ return Object.assign({}, p, {id:'L'+p.id}); }),
+        visits:(s.visits||[]).map(function(v){ return Object.assign({}, v, {id:'L'+v.id, pinId:'L'+v.pinId}); })});
+      return (out.pins.length || out.visits.length) ? out : null;
+    }catch(e){ return null; }
+  }
+
+  /* ---------- state ---------- */
+  var state = {title:'', bg:null, circles:[], pins:[], visits:[]};
+  var ready = false;
+
+  /* ---------- sync layer (db capability) ---------- */
+  var db = null, canWrite = true, dlApi = null, assetsApi = null;
+  var synced = {circles:{}, pins:{}, visits:{}, settings:{}}; // kind -> id -> {s: serialized, b: body}
+  var flushT = null, flushing = false, fitted = false;
+  var KINDS = ['circles','pins','visits'];
+
+  function setSync(kind){
+    var el = $('syncBadge');
+    var map = {
+      loading:['جارٍ تحميل البيانات...', 'wait'],
+      live:['● حفظ تلقائي على هذا الجهاز', 'ok'],
+      ro:['● عرض فقط', 'warn'],
+      local:['● وضع محلي: لن تُحفظ التعديلات ولن تُشارك', 'warn'],
+      error:['● تعذّر تحميل البيانات المحفوظة', 'bad']
+    };
+    el.textContent = map[kind][0];
+    el.className = 'sync ' + map[kind][1];
+  }
+
+  function localDocs(kind){
+    var m = {};
+    if(kind === 'settings'){ m.main = {title:state.title || '', bg:state.bg || null}; return m; }
+    state[kind].forEach(function(o){ if(!o._new) m[o.id] = body(o); });
+    return m;
+  }
+
+  function save(){
+    if(!db) return;
+    if(!canWrite){ fullRebuild(); say('عرض فقط.'); return; }
+    clearTimeout(flushT); flushT = setTimeout(flush, 500);
+  }
+
+  function flush(){
+    if(!db || !canWrite) return;
+    if(flushing){ clearTimeout(flushT); flushT = setTimeout(flush, 400); return; }
+    var ops = [];
+    KINDS.concat('settings').forEach(function(kind){
+      var loc = localDocs(kind), syn = synced[kind];
+      Object.keys(loc).forEach(function(id){
+        if(kind === 'settings' && !syn[id] && !loc[id].title && !loc[id].bg) return; // nothing customised yet
+        var s = ser(loc[id]);
+        if(!syn[id] || syn[id].s !== s) ops.push({kind:kind, id:id, data:loc[id], s:s});
+      });
+      if(kind !== 'settings') Object.keys(syn).forEach(function(id){ if(!(id in loc)) ops.push({kind:kind, id:id, del:true}); });
+    });
+    if(!ops.length) return;
+    flushing = true;
+    var failed = false;
+    (function next(i){
+      if(i >= ops.length){
+        flushing = false;
+        if(failed){ clearTimeout(flushT); flushT = setTimeout(flush, 8000); }
+        return;
+      }
+      var op = ops[i], ref = db.collection(op.kind).doc(op.id);
+      var p = op.del ? ref.delete() : ref.set(op.data);
+      p.then(function(){
+        if(op.del) delete synced[op.kind][op.id];
+        else synced[op.kind][op.id] = {s:op.s, b:op.data};
+        next(i + 1);
+      }, function(e){
+        if(e && e.code === 'invalid_argument' && !failed){
+          canWrite = false; setSync('ro'); flushing = false; fullRebuild();
+          say('تعذّر حفظ التعديلات.');
+          return;
+        }
+        if(!failed) say('تعذّر حفظ بعض التعديلات، ستتم إعادة المحاولة.');
+        failed = true;
+        next(i + 1);
+      });
+    })(0);
+  }
+
+  window.addEventListener('pagehide', function(){ clearTimeout(flushT); flush(); });
+  document.addEventListener('visibilitychange', function(){ if(document.hidden){ clearTimeout(flushT); flush(); } });
+
+  function findLocal(kind, id){
+    var arr = state[kind];
+    for(var i=0;i<arr.length;i++) if(arr[i].id === id) return arr[i];
+    return null;
+  }
+  function hasUnsent(kind, id){
+    var loc = findLocal(kind, id);
+    if(!loc || loc._new) return false;
+    var syn = synced[kind][id];
+    return !syn || syn.s !== ser(body(loc));
+  }
+
+  function onSnap(kind, snap){
+    var remote = {};
+    snap.docs.forEach(function(d){ if(d.exists) remote[d.id] = d.data(); });
+    var touched = false;
+    Object.keys(remote).forEach(function(id){
+      var clean = CLEAN[kind](remote[id], id);
+      if(!clean) return;
+      var b = body(clean), s = ser(b);
+      if(synced[kind][id] && synced[kind][id].s === s) return;
+      if(hasUnsent(kind, id)) return;
+      synced[kind][id] = {s:s, b:b};
+      upsertLocal(kind, clean);
+      touched = true;
+    });
+    if(!snap.metadata.fromCache){
+      Object.keys(synced[kind]).forEach(function(id){
+        if(id in remote) return;
+        if(hasUnsent(kind, id)) { return; }
+        delete synced[kind][id];
+        removeLocal(kind, id);
+        touched = true;
+      });
+    }
+    if(kind === 'circles'){
+      if(touched || !ready){ renderCircles(); renderPins(); refreshOpenPinPopup(); }
+      if(!ready){ ready = true; renderCircles(); }
+      if(!fitted && state.circles.length){ fitted = true; fitToCircles(); }
+    }
+    if(kind === 'pins' && touched){
+      renderPins(); refreshOpenPinPopup();
+      if(document.body.classList.contains('vis-mode')) refreshVisitsSelect();
+    }
+    if(kind === 'visits' && touched){
+      if(document.body.classList.contains('vis-mode')) renderVisits();
+      renderPins(); refreshOpenPinPopup();
+    }
+  }
+
+  function onSettings(d){
+    if(!d.exists) return;
+    var raw = d.data() || {};
+    var b = {title:String(raw.title||'').slice(0,120), bg:cleanBg(raw.bg)}, s = ser(b);
+    if(synced.settings.main && synced.settings.main.s === s) return;
+    var loc = {title:state.title || '', bg:state.bg || null};
+    if(synced.settings.main && synced.settings.main.s !== ser(loc)) return; // local edit not sent yet
+    synced.settings.main = {s:s, b:b};
+    state.title = b.title; state.bg = b.bg;
+    applyTitle(); applyBg();
+  }
+
+  function upsertLocal(kind, o){
+    var cur = findLocal(kind, o.id);
+    if(cur){ Object.keys(cur).forEach(function(k){ if(k.charAt(0) !== '_') delete cur[k]; }); Object.assign(cur, o); }
+    else { state[kind].push(o); cur = o; }
+    if(kind === 'circles') drawCircle(cur);
+    if(kind === 'pins'){
+      var mk = pinMarkers[cur.id];
+      if(mk){ mk.setLatLng([cur.lat, cur.lng]); if(mk.getElement()) mk.getElement().title = cur.store || ''; }
+      else drawPin(cur);
+    }
+  }
+  function removeLocal(kind, id){
+    state[kind] = state[kind].filter(function(o){ return o.id !== id; });
+    if(kind === 'circles'){
+      var l = circleLayers[id];
+      if(l){ map.removeLayer(l.circle); map.removeLayer(l.label); delete circleLayers[id]; }
+    }
+    if(kind === 'pins'){
+      var mk = pinMarkers[id];
+      if(mk){ map.removeLayer(mk); delete pinMarkers[id]; }
+    }
+  }
+
+  function fullRebuild(){
+    clearCircleLayers();
+    Object.keys(pinMarkers).forEach(function(k){ map.removeLayer(pinMarkers[k]); });
+    pinMarkers = {};
+    KINDS.forEach(function(kind){
+      state[kind] = Object.keys(synced[kind]).map(function(id){ return Object.assign({id:id}, synced[kind][id].b); });
+    });
+    var st = synced.settings.main;
+    state.title = st ? st.b.title : ''; state.bg = st ? st.b.bg : null;
+    drawAllCircles(); state.pins.forEach(drawPin);
+    renderCircles(); renderPins(); applyTitle(); applyBg();
+    if(document.body.classList.contains('vis-mode')){ refreshVisitsSelect(); renderVisits(); }
+  }
+
+  function startSync(){
+    setSync('loading');
+    var errored = false;
+    function onErr(e){
+      if(errored) return; errored = true;
+      setSync('error');
+      say('تعذّر تحميل البيانات المحفوظة. أعد تشغيل التطبيق.');
+    }
+    KINDS.forEach(function(kind){
+      db.collection(kind).onSnapshot(function(snap){ onSnap(kind, snap); }, onErr);
+    });
+    db.doc('settings/main').onSnapshot(onSettings, onErr);
+    setSync(canWrite ? 'live' : 'ro');
+    offerLegacy();
+  }
+
+  function offerLegacy(){
+    var lg = legacyData();
+    if(!lg || !canWrite) return;
+    var box = $('legacyBox');
+    box.hidden = false;
+    $('legacyBtn').onclick = function(){
+      ask('رفع ' + lg.pins.length + ' متجر و ' + lg.visits.length + ' زيارة من هذا المتصفح إلى التطبيق؟', function(){
+        lg.pins.forEach(function(p){ if(!findLocal('pins', p.id)) state.pins.push(p); });
+        lg.visits.forEach(function(v){ if(!findLocal('visits', v.id)) state.visits.push(v); });
+        if(lg.title && !state.title) state.title = lg.title;
+        state.pins.forEach(function(p){ if(!pinMarkers[p.id]) drawPin(p); });
+        save(); renderPins(); applyTitle();
+        try{ localStorage.removeItem(LEGACY_KEY); }catch(e){}
+        box.hidden = true; say('تم رفع البيانات المحلية.');
+      });
+    };
+    $('legacySkip').onclick = function(){ box.hidden = true; };
+  }
+
+  /* ---------- map ---------- */
+  var map = L.map('map', {zoomControl:true, doubleClickZoom:false});
+  map.createPane('bgPane').style.zIndex = 250;
+  var tileDefs = [
+    ['صور الأقمار الصناعية', 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {maxZoom:19, attribution:'Tiles &copy; Esri'}],
+    ['خريطة الشوارع (Esri)', 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {maxZoom:19, attribution:'Tiles &copy; Esri'}]
+  ];
+  var baseMaps = {};
+  var tileLayers = tileDefs.map(function(d){ var l = L.tileLayer(d[1], d[2]); baseMaps[d[0]] = l; return l; });
+  tileLayers[0].addTo(map);
+  L.control.layers(baseMaps, null, {position:'topright'}).addTo(map);
+
+  var toast = $('toast');
+  function showToast(t){ toast.textContent = t; toast.style.display = 'block'; setTimeout(function(){ toast.style.display = 'none'; }, 7000); }
+  tileLayers.forEach(function(l, idx){
+    var ok = 0, bad = 0;
+    l.on('tileload', function(){ ok++; });
+    l.on('tileerror', function(){
+      bad++;
+      if(ok === 0 && bad === 4 && map.hasLayer(l) && idx === tileLayers.length - 1) showToast('تعذّر تحميل صور الخريطة. تحقق من اتصال الإنترنت، أو ارفع صورة خلفية من تبويب «الخلفية».');
+      if(ok === 0 && bad >= 4 && map.hasLayer(l) && idx < tileLayers.length - 1){
+        map.removeLayer(l);
+        tileLayers[idx+1].addTo(map);
+      }
+    });
+  });
+  L.control.scale({metric:true, imperial:false, position:'bottomleft'}).addTo(map);
+  map.setView(OFFICE, 12);
+
+  var officeMarker = L.marker(OFFICE, {
+    icon: L.divIcon({className:'office', html:'<span>★</span>', iconSize:[30,30], iconAnchor:[15,15]}),
+    zIndexOffset: 1000
+  }).addTo(map);
+  officeMarker.bindPopup(function(){
+    return h('div', {class:'card'}, [
+      h('h3', {text:'موقع المكتب'}),
+      h('div', {text:'33°31\'26.4"N 36°17\'48.8"E', style:'direction:ltr;text-align:right'})
+    ]);
+  });
+
+  /* ---------- background image ---------- */
+  var bgLayer = null;
+  function bgBounds(b){
+    var lat = OFFICE[0] + b.oy / KM_LAT, lng = OFFICE[1] + b.ox / KM_LNG;
+    var dLat = (b.w * b.ar) / 2 / KM_LAT, dLng = b.w / 2 / KM_LNG;
+    return [[lat - dLat, lng - dLng], [lat + dLat, lng + dLng]];
+  }
+  function applyBg(){
+    var b = state.bg;
+    refreshBgPanel();
+    if(!b){ if(bgLayer){ map.removeLayer(bgLayer); bgLayer = null; } return; }
+    if(bgLayer && bgLayer._bgId === b.id){ bgLayer.setBounds(bgBounds(b)); bgLayer.setOpacity(b.op); return; }
+    if(bgLayer) map.removeLayer(bgLayer);
+    bgLayer = L.imageOverlay(window.__blobUrl(b.id), bgBounds(b), {pane:'bgPane', opacity:b.op}).addTo(map);
+    bgLayer._bgId = b.id;
+  }
+  function refreshBgPanel(){
+    var b = state.bg;
+    $('bgEditor').hidden = !assetsApi;
+    $('bgNote').textContent = assetsApi
+      ? 'التقط صورة للخريطة بحيث يكون موقع المكتب في منتصف الصورة تماماً، ارفعها هنا، ثم أدخل عرض الصورة بالكيلومتر (من مقياس الرسم) وعدّل الإزاحة حتى تنطبق الدوائر على الشوارع.'
+      : (b ? 'صورة الخلفية مضافة.' : 'لا توجد صورة خلفية.');
+    [['bgW','w'],['bgOx','ox'],['bgOy','oy'],['bgOp','op']].forEach(function(p){
+      var el = $(p[0]);
+      if(document.activeElement !== el) el.value = b ? b[p[1]] : (p[1] === 'op' ? 0.9 : (p[1] === 'w' ? 20 : 0));
+      el.disabled = !b;
+    });
+    $('bgRemove').disabled = !b;
+  }
+  function bgInput(key, el){
+    el.addEventListener('input', function(){
+      if(!state.bg) return;
+      var v = parseFloat(el.value); if(!isFinite(v)) return;
+      state.bg[key] = v; state.bg = cleanBg(state.bg) || state.bg;
+      applyBg(); save();
+    });
+  }
+  bgInput('w', $('bgW')); bgInput('ox', $('bgOx')); bgInput('oy', $('bgOy')); bgInput('op', $('bgOp'));
+  $('bgFile').addEventListener('change', function(){
+    var f = this.files[0], inp = this; if(!f || !assetsApi) return;
+    if(!/^image\/(png|jpeg|webp)$/.test(f.type)){ say('اختر صورة PNG أو JPG أو WebP.'); inp.value = ''; return; }
+    if(f.size > 15 * 1024 * 1024){ say('الصورة كبيرة جداً (الحد 15 ميغابايت).'); inp.value = ''; return; }
+    say('جارٍ رفع الصورة...');
+    var url = URL.createObjectURL(f), img = new Image();
+    img.onload = function(){
+      var ar = img.naturalHeight / img.naturalWidth;
+      URL.revokeObjectURL(url);
+      assetsApi.upload(f).then(function(res){
+        var old = state.bg;
+        state.bg = cleanBg({id:res.id, w:20, ox:0, oy:0, op:0.9, ar:ar});
+        applyBg(); save(); inp.value = '';
+        if(old && old.id !== res.id) assetsApi.delete(old.id).catch(function(){});
+        say('تم رفع الصورة. اضبط العرض والإزاحة.');
+      }, function(){ say('تعذّر رفع الصورة.'); inp.value = ''; });
+    };
+    img.onerror = function(){ URL.revokeObjectURL(url); say('تعذّر قراءة الصورة.'); inp.value = ''; };
+    img.src = url;
+  });
+  $('bgRemove').addEventListener('click', function(){
+    if(!state.bg) return;
+    ask('إزالة صورة الخلفية؟', function(){
+      var old = state.bg; state.bg = null; applyBg(); save();
+      if(assetsApi && old) assetsApi.delete(old.id).catch(function(){});
+    });
+  });
+
+  /* ---------- circles ---------- */
+  var circleLayers = {};
+  function labelPoint(center, km){ return [center[0] + (km*1000)/111320, center[1]]; }
+  function drawCircle(c){
+    var old = circleLayers[c.id];
+    if(old){ map.removeLayer(old.circle); map.removeLayer(old.label); delete circleLayers[c.id]; }
+    if(!c.visible) return;
+    var ctr = c.center || OFFICE;
+    var circle = L.circle(ctr, {
+      radius:c.km*1000, color:c.color, weight:c.weight, fillColor:c.color, fillOpacity:c.fillOpacity,
+      dashArray:c.dashed ? '8 6' : null
+    }).addTo(map);
+    circle.on('click', function(){ if(!mode) flashRow(c.id); });
+    var text = c.name ? (c.name + ' · ' + fmtKm(c.km) + ' كم') : (fmtKm(c.km) + ' km');
+    var label = L.marker(labelPoint(ctr, c.km), {
+      icon: L.divIcon({className:'ring-label', html:'<span style="border-color:'+c.color+';color:'+c.color+'"></span>', iconSize:[0,0]}),
+      interactive:false, keyboard:false
+    }).addTo(map);
+    label.getElement().firstChild.textContent = text;
+    circleLayers[c.id] = {circle:circle, label:label};
+    officeMarker.setZIndexOffset(1000);
+  }
+  function drawAllCircles(){ state.circles.forEach(drawCircle); }
+  function clearCircleLayers(){
+    Object.keys(circleLayers).forEach(function(k){ map.removeLayer(circleLayers[k].circle); map.removeLayer(circleLayers[k].label); });
+    circleLayers = {};
+  }
+  function fitToCircles(){
+    var b = null;
+    state.circles.forEach(function(c){
+      if(!c.visible) return;
+      var bb = L.circle(c.center||OFFICE, {radius:c.km*1000}).getBounds();
+      b = b ? b.extend(bb) : bb;
+    });
+    if(b) map.fitBounds(b, {padding:[20,20]});
+    else map.setView(OFFICE, 13);
+  }
+
+  var listEl = $('circleList');
+  function flashRow(id){
+    var row = $('circ-'+id);
+    if(!row) return;
+    selectTab('circles');
+    row.open = true;
+    row.scrollIntoView({block:'nearest', behavior:'smooth'});
+    row.classList.add('flash');
+    setTimeout(function(){ row.classList.remove('flash'); }, 1200);
+  }
+  function titleOf(c){ return (c.name ? c.name + ' - ' : '') + fmtKm(c.km) + ' كم'; }
+
+  function circleRow(c){
+    var dot = h('span', {class:'dot'});
+    var title = h('span', {class:'ttl'});
+    var sub = h('span', {class:'sub'});
+    var vis = h('input', {type:'checkbox', title:'إظهار / إخفاء'});
+    vis.checked = c.visible;
+    var del = h('button', {class:'btn small danger', title:'حذف الدائرة', text:'حذف'});
+    function refreshHead(){
+      dot.style.background = c.color + '33';
+      dot.style.borderColor = c.color;
+      title.textContent = titleOf(c);
+      sub.textContent = c.center ? 'مركز مخصص' : '';
+    }
+    refreshHead();
+    var summary = h('summary', {}, [dot, title, sub, vis, del]);
+    vis.addEventListener('change', function(){ c.visible = vis.checked; drawCircle(c); save(); });
+    del.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); removeCircle(c.id); });
+
+    var nameIn = h('input', {type:'text', maxlength:'60', placeholder:'اسم اختياري (مثال: منطقة التوزيع)'});
+    nameIn.value = c.name;
+    nameIn.addEventListener('input', function(){ c.name = nameIn.value; refreshHead(); drawCircle(c); save(); });
+    var kmIn = h('input', {type:'number', min:'0.1', step:'0.1', inputmode:'decimal'});
+    kmIn.value = c.km;
+    kmIn.addEventListener('input', function(){
+      var v = parseFloat(kmIn.value);
+      if(!isFinite(v) || v <= 0) return;
+      c.km = v; refreshHead(); drawCircle(c); save(); renderPins(); refreshOpenPinPopup();
+    });
+    var colIn = h('input', {type:'color'}); colIn.value = c.color;
+    colIn.addEventListener('input', function(){ c.color = colIn.value; refreshHead(); drawCircle(c); save(); });
+    var wIn = h('input', {type:'range', min:'1', max:'10', step:'1'}); wIn.value = c.weight;
+    wIn.addEventListener('input', function(){ c.weight = +wIn.value; drawCircle(c); save(); });
+    var fIn = h('input', {type:'range', min:'0', max:'0.6', step:'0.01'}); fIn.value = c.fillOpacity;
+    fIn.addEventListener('input', function(){ c.fillOpacity = +fIn.value; drawCircle(c); save(); });
+    var dashIn = h('input', {type:'checkbox'}); dashIn.checked = c.dashed;
+    dashIn.addEventListener('change', function(){ c.dashed = dashIn.checked; drawCircle(c); save(); });
+    var moveBtn = h('button', {class:'btn small', text:'نقل المركز بالنقر على الخريطة'});
+    moveBtn.addEventListener('click', function(){ startMode({type:'circleCenter', id:c.id}, 'انقر على الخريطة لتحديد مركز الدائرة (' + titleOf(c) + ')'); });
+    var homeBtn = h('button', {class:'btn small', text:'المركز = المكتب'});
+    homeBtn.addEventListener('click', function(){ c.center = null; drawCircle(c); save(); refreshHead(); });
+    var zoomBtn = h('button', {class:'btn small', text:'تكبير إلى الدائرة'});
+    zoomBtn.addEventListener('click', function(){ map.fitBounds(L.circle(c.center||OFFICE, {radius:c.km*1000}).getBounds(), {padding:[30,30]}); });
+
+    var bodyEl = h('div', {class:'body'}, [
+      h('label', {class:'f', text:'الاسم'}), nameIn,
+      h('div', {class:'grid2'}, [
+        h('div', {}, [h('label', {class:'f', text:'نصف القطر (كم)'}), kmIn]),
+        h('div', {}, [h('label', {class:'f', text:'اللون'}), colIn])
+      ]),
+      h('div', {class:'grid2'}, [
+        h('div', {}, [h('label', {class:'f', text:'سماكة الخط'}), wIn]),
+        h('div', {}, [h('label', {class:'f', text:'شفافية التعبئة'}), fIn])
+      ]),
+      h('label', {class:'f'}, [dashIn, ' خط متقطع']),
+      h('div', {class:'row', style:'margin-top:8px;flex-wrap:wrap'}, [moveBtn, homeBtn, zoomBtn])
+    ]);
+    return h('details', {class:'circ', id:'circ-'+c.id}, [summary, bodyEl]);
+  }
+
+  function renderCircles(){
+    var openIds = {};
+    Array.prototype.forEach.call(listEl.querySelectorAll('details.circ'), function(d){ if(d.open) openIds[d.id] = true; });
+    listEl.replaceChildren();
+    if(!state.circles.length){
+      listEl.appendChild(h('div', {class:'empty', text: ready || !db ? 'لا توجد دوائر. أضف دائرة جديدة أو استعد الدوائر 1-10.' : 'جارٍ تحميل البيانات...'}));
+      return;
+    }
+    state.circles.slice().sort(function(a,b){ return a.km - b.km; }).forEach(function(c){
+      var row = circleRow(c);
+      if(openIds[row.id]) row.open = true;
+      listEl.appendChild(row);
+    });
+  }
+
+  function removeCircle(id){
+    var c = findLocal('circles', id);
+    if(!c) return;
+    ask('حذف الدائرة ' + titleOf(c) + '؟', function(){
+      removeLocal('circles', id);
+      save(); renderCircles(); renderPins(); refreshOpenPinPopup();
+    });
+  }
+
+  function addCircleAt(center){
+    var km = parseFloat($('newKm').value);
+    if(!isFinite(km) || km <= 0){ say('أدخل نصف قطر صحيح بالكيلومتر (أكبر من صفر).'); return; }
+    var c = cleanCircle({km:km, color:$('newColor').value, center:center, visible:true}, newId());
+    state.circles.push(c);
+    drawCircle(c); save(); renderCircles(); renderPins();
+    map.fitBounds(L.circle(c.center||OFFICE, {radius:km*1000}).getBounds(), {padding:[30,30]});
+    flashRow(c.id);
+  }
+
+  $('addCircle').addEventListener('click', function(){
+    var m = document.querySelector('input[name=ctr]:checked').value;
+    if(m === 'office') addCircleAt(null);
+    else startMode({type:'newCircle'}, 'انقر على الخريطة لتحديد مركز الدائرة الجديدة');
+  });
+  $('showAll').addEventListener('click', function(){
+    state.circles.forEach(function(c){ c.visible = true; }); drawAllCircles(); save(); renderCircles();
+  });
+  $('hideAll').addEventListener('click', function(){
+    state.circles.forEach(function(c){ c.visible = false; }); drawAllCircles(); save(); renderCircles();
+  });
+  $('resetCircles').addEventListener('click', function(){
+    ask('استبدال الدوائر الحالية بالدوائر العشر الافتراضية (1-10 كم)؟ الدبابيس لن تتأثر.', function(){
+      state.circles = defaultCircles();
+      clearCircleLayers();
+      drawAllCircles(); save(); renderCircles(); renderPins(); fitToCircles();
+    });
+  });
+  $('delAll').addEventListener('click', function(){
+    if(!state.circles.length) return;
+    ask('حذف كل الدوائر؟', function(){
+      state.circles = []; clearCircleLayers();
+      save(); renderCircles(); renderPins();
+    });
+  });
+
+  /* ---------- interaction modes ---------- */
+  var mode = null;
+  var banner = $('banner');
+  function startMode(m, text){
+    mode = m;
+    $('bannerText').textContent = text;
+    banner.style.display = 'block';
+    map.getContainer().classList.add('map-crosshair');
+  }
+  function endMode(){
+    mode = null;
+    banner.style.display = 'none';
+    map.getContainer().classList.remove('map-crosshair');
+  }
+  $('bannerCancel').addEventListener('click', endMode);
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') endMode(); });
+
+  map.on('click', function(e){
+    if(!mode) return;
+    var m = mode; endMode();
+    var pt = [e.latlng.lat, e.latlng.lng];
+    if(m.type === 'newCircle') addCircleAt(pt);
+    else if(m.type === 'circleCenter'){
+      var c = findLocal('circles', m.id);
+      if(c){ c.center = pt; drawCircle(c); save(); renderCircles(); flashRow(c.id); }
+    } else if(m.type === 'pin'){
+      var p = {id:newId(), lat:pt[0], lng:pt[1], store:'', owner:'', phone:'', type:'new', lastInvoice:'', purchases:'', invoice:null, notes:'', _new:true};
+      state.pins.push(p);
+      var mk = drawPin(p);
+      renderPins();
+      mk.setPopupContent(pinForm(p, mk));
+      mk.openPopup();
+    }
+  });
+
+  /* ---------- pins ---------- */
+  var pinMarkers = {};
+  var pinIcon = L.divIcon({className:'pin', html:'<span></span>', iconSize:[30,40], iconAnchor:[15,36], popupAnchor:[0,-34]});
+
+  function distKm(p){ return L.latLng(OFFICE).distanceTo(L.latLng(p.lat, p.lng)) / 1000; }
+  function ringText(p){
+    var d = distKm(p);
+    var rings = state.circles.filter(function(c){ return !c.center; }).sort(function(a,b){ return a.km - b.km; });
+    var hit = null;
+    for(var i=0;i<rings.length;i++){ if(d <= rings[i].km){ hit = rings[i]; break; } }
+    var t = 'يبعد عن المكتب: ' + (Math.round(d*100)/100) + ' كم';
+    if(hit) t += ' (ضمن نطاق ' + fmtKm(hit.km) + ' كم)';
+    else if(rings.length) t += ' (خارج الدوائر)';
+    return t;
+  }
+  function openVisits(pinId){ enterVisits(pinId); }
+
+  function pinView(p, mk){
+    var dl = h('dl', {}, []);
+    function item(label, valNode){
+      dl.appendChild(h('dt', {text:label}));
+      dl.appendChild(h('dd', {}, [valNode]));
+    }
+    function txt(t){ return document.createTextNode(t); }
+    item('صاحب المتجر', txt(p.owner || '-'));
+    var digits = (p.phone || '').replace(/[^\d+]/g, '');
+    item('الرقم', digits ? h('a', {href:'tel:' + digits, text:p.phone}) : txt('-'));
+    item('نوع العميل', txt(typeLabel(p.type)));
+    item('تاريخ آخر فاتورة', p.lastInvoice ? h('span', {dir:'ltr', text:p.lastInvoice}) : txt('-'));
+    item('المشتريات', txt(p.purchases || '-'));
+    item('قيمة الفاتورة (USD)', p.invoice === null || p.invoice === undefined ? txt('-') : h('span', {dir:'ltr', text:fmtUsd(p.invoice)}));
+    var n = state.visits.filter(function(v){ return v.pinId === p.id; }).length;
+    item('سجل الزيارات', h('button', {class:'btn small primary', text:'عرض / إضافة زيارات (' + n + ')',
+      onclick:function(){ mk.closePopup(); openVisits(p.id); }}));
+    item('الملاحظات', txt(p.notes || '-'));
+    return h('div', {class:'card'}, [
+      h('h3', {text:p.store || '(بدون اسم)'}),
+      dl,
+      h('div', {class:'dist', text:ringText(p)}),
+      h('div', {class:'acts'}, [
+        h('button', {class:'btn small', text:'تعديل', onclick:function(){ mk.setPopupContent(pinForm(p, mk)); }}),
+        h('button', {class:'btn small danger', text:'حذف', onclick:function(){ removePin(p.id); }})
+      ])
+    ]);
+  }
+
+  function pinForm(p, mk){
+    var store = h('input', {type:'text', maxlength:'200'}); store.value = p.store;
+    var owner = h('input', {type:'text', maxlength:'200'}); owner.value = p.owner;
+    var phone = h('input', {type:'tel', maxlength:'60', dir:'ltr', style:'text-align:right'}); phone.value = p.phone;
+    var type = h('select', {}, [
+      h('option', {value:'', text:'— اختر —'}),
+      h('option', {value:'new', text:'عميل جديد'}),
+      h('option', {value:'old', text:'عميل قديم'})
+    ]);
+    type.value = p.type || '';
+    var lastInv = h('input', {type:'date'}); lastInv.value = p.lastInvoice || '';
+    var purchases = h('textarea', {maxlength:'1000'}); purchases.value = p.purchases || '';
+    var invoice = h('input', {type:'number', min:'0', step:'0.01', inputmode:'decimal', dir:'ltr', style:'text-align:right'});
+    invoice.value = (p.invoice === null || p.invoice === undefined) ? '' : p.invoice;
+    var notes = h('textarea', {maxlength:'2000'}); notes.value = p.notes;
+    var form = h('div', {class:'card', 'data-form':'1'}, [
+      h('label', {text:'اسم المتجر'}), store,
+      h('label', {text:'صاحب المتجر'}), owner,
+      h('label', {text:'الرقم'}), phone,
+      h('label', {text:'نوع العميل'}), type,
+      h('label', {text:'تاريخ آخر فاتورة'}), lastInv,
+      h('label', {text:'المشتريات'}), purchases,
+      h('label', {text:'قيمة الفاتورة (USD)'}), invoice,
+      h('label', {text:'الملاحظات'}), notes,
+      h('div', {class:'acts'}, [
+        h('button', {class:'btn small primary', text:'حفظ', onclick:function(){
+          p.store = store.value.trim(); p.owner = owner.value.trim(); p.phone = phone.value.trim();
+          p.type = type.value; p.lastInvoice = cleanDate(lastInv.value); p.purchases = purchases.value.trim();
+          p.invoice = cleanMoney(invoice.value); p.notes = notes.value.trim();
+          delete p._new; save(); renderPins();
+          mk.setPopupContent(pinView(p, mk));
+        }}),
+        h('button', {class:'btn small', text:'إلغاء', onclick:function(){
+          if(p._new){ removePin(p.id, true); } else mk.setPopupContent(pinView(p, mk));
+        }})
+      ])
+    ]);
+    setTimeout(function(){ store.focus(); }, 50);
+    return form;
+  }
+
+  function drawPin(p){
+    var mk = L.marker([p.lat, p.lng], {icon:pinIcon, draggable:true, title:p.store || ''});
+    mk.bindPopup(pinView(p, mk), {minWidth:260, maxWidth:320, maxHeight:440, closeOnClick:false});
+    mk.on('popupopen', function(){
+      var cur = mk.getPopup().getContent();
+      if(!p._new && !(cur && cur.dataset && cur.dataset.form)) mk.setPopupContent(pinView(p, mk));
+    });
+    mk.on('dragend', function(){
+      var ll = mk.getLatLng(); p.lat = ll.lat; p.lng = ll.lng; save(); renderPins();
+      if(mk.isPopupOpen()) mk.setPopupContent(pinView(p, mk));
+    });
+    mk.addTo(map);
+    pinMarkers[p.id] = mk;
+    return mk;
+  }
+
+  function removePin(id, silent){
+    var p = findLocal('pins', id);
+    if(!p) return;
+    function doRemove(){
+      removeLocal('pins', id);
+      state.visits = state.visits.filter(function(v){ return v.pinId !== id; });
+      save(); renderPins();
+    }
+    if(silent){ doRemove(); return; }
+    var nv = state.visits.filter(function(v){ return v.pinId === id; }).length;
+    ask('حذف الدبوس "' + (p.store || 'بدون اسم') + '"؟' + (nv ? ' سيتم حذف ' + nv + ' زيارة مسجّلة لهذا المتجر أيضاً.' : ''), doRemove);
+  }
+
+  function refreshOpenPinPopup(){
+    state.pins.forEach(function(p){
+      var mk = pinMarkers[p.id];
+      if(!mk || !mk.isPopupOpen() || p._new) return;
+      var cur = mk.getPopup().getContent();
+      if(cur && cur.dataset && cur.dataset.form) return;
+      mk.setPopupContent(pinView(p, mk));
+    });
+  }
+
+  var pinListEl = $('pinList');
+  var pinSearch = $('pinSearch');
+  pinSearch.addEventListener('input', renderPins);
+  function renderPins(){
+    var q = pinSearch.value.trim().toLowerCase();
+    pinListEl.replaceChildren();
+    var list = state.pins.filter(function(p){
+      if(p._new) return false;
+      return !q || (p.store + ' ' + p.owner + ' ' + p.phone + ' ' + p.purchases + ' ' + typeLabel(p.type) + ' ' + p.notes).toLowerCase().indexOf(q) !== -1;
+    });
+    if(!list.length){
+      pinListEl.appendChild(h('div', {class:'empty', text: state.pins.length ? 'لا نتائج.' : 'لا توجد دبابيس بعد. اضغط "إضافة دبوس" ثم انقر على موقع المتجر.'}));
+      return;
+    }
+    list.forEach(function(p){
+      var row = h('div', {class:'pinrow'}, [
+        h('div', {class:'meta'}, [
+          h('b', {text:p.store || '(بدون اسم)'}),
+          h('span', {text:(p.owner ? p.owner + ' · ' : '') + (Math.round(distKm(p)*10)/10) + ' كم'})
+        ]),
+        h('button', {class:'btn small danger', text:'حذف', onclick:function(e){ e.stopPropagation(); removePin(p.id); }})
+      ]);
+      row.addEventListener('click', function(){
+        var mk = pinMarkers[p.id];
+        if(mk){ map.setView(mk.getLatLng(), Math.max(map.getZoom(), 15)); mk.openPopup(); }
+      });
+      pinListEl.appendChild(row);
+    });
+  }
+  $('addPin').addEventListener('click', function(){
+    startMode({type:'pin'}, 'انقر على الخريطة لوضع الدبوس (Esc للإلغاء)');
+  });
+
+  /* ---------- visits section ---------- */
+  var VF = {};
+  ['vPin','vFormWrap','vHint','vForm','vFormTitle','vBody','vEmpty','vCount','vBack','vCsv','vPdf','vSave','vCancel','vMsg',
+   'vf-store','vf-owner','vf-phone','vf-type','vf-no','vf-date','vf-lastInv','vf-purchases','vf-invoice','vf-address','vf-notes','vf-sync'
+  ].forEach(function(id){ VF[id] = $(id); });
+  var vSel = '', vEditing = null, vMsgTimer = null;
+
+  function pinById(id){ var p = id ? findLocal('pins', id) : null; return (p && !p._new) ? p : null; }
+  function visitsOf(pinId){ return state.visits.filter(function(v){ return v.pinId === pinId; }); }
+  function nextVisitNo(pinId){
+    var m = 0; visitsOf(pinId).forEach(function(v){ if(v.no > m) m = v.no; });
+    return m + 1;
+  }
+  function lastAddress(pinId){
+    var vs = visitsOf(pinId).filter(function(v){ return v.address; }).sort(function(a, b){ return b.no - a.no; });
+    return vs.length ? vs[0].address : '';
+  }
+  function vFlash(t){
+    VF.vMsg.textContent = t;
+    clearTimeout(vMsgTimer);
+    vMsgTimer = setTimeout(function(){ VF.vMsg.textContent = ''; }, 3000);
+  }
+  function fillPinSelect(){
+    var sel = VF.vPin; sel.replaceChildren();
+    sel.appendChild(h('option', {value:'', text:'— كل المتاجر —'}));
+    state.pins.filter(function(p){ return !p._new; })
+      .sort(function(a,b){ return (a.store||'').localeCompare(b.store||'', 'ar'); })
+      .forEach(function(p){ sel.appendChild(h('option', {value:p.id, text:p.store || '(بدون اسم)'})); });
+  }
+  function refreshVisitsSelect(){
+    fillPinSelect();
+    if(vSel && !pinById(vSel)){ selectPin(''); return; }
+    VF.vPin.value = vSel;
+    renderVisits();
+  }
+  function selectPin(id){
+    if(id && !pinById(id)) id = '';
+    vSel = id; VF.vPin.value = id;
+    renderVisits(); resetForm();
+  }
+  function enterVisits(pinId){
+    document.body.classList.add('vis-mode');
+    fillPinSelect();
+    selectPin(pinId || '');
+    window.scrollTo(0, 0);
+  }
+  function leaveVisits(){
+    document.body.classList.remove('vis-mode');
+    setTimeout(function(){ map.invalidateSize(); }, 50);
+  }
+  function resetForm(){
+    vEditing = null;
+    var p = pinById(vSel);
+    VF.vFormWrap.style.display = p ? '' : 'none';
+    VF.vHint.style.display = p ? 'none' : '';
+    VF.vFormTitle.textContent = 'إضافة زيارة جديدة';
+    VF.vCancel.style.display = 'none';
+    VF.vSave.textContent = 'إضافة إلى الجدول';
+    Array.prototype.forEach.call(VF.vBody.querySelectorAll('tr.editing'), function(r){ r.classList.remove('editing'); });
+    if(!p) return;
+    VF['vf-store'].value = p.store; VF['vf-owner'].value = p.owner; VF['vf-phone'].value = p.phone;
+    VF['vf-type'].value = p.type || '';
+    VF['vf-no'].value = nextVisitNo(p.id);
+    VF['vf-date'].value = todayStr();
+    VF['vf-lastInv'].value = p.lastInvoice || '';
+    VF['vf-purchases'].value = ''; VF['vf-invoice'].value = ''; VF['vf-address'].value = lastAddress(p.id); VF['vf-notes'].value = '';
+    VF['vf-sync'].checked = true;
+  }
+  function startEdit(id){
+    var v = findLocal('visits', id);
+    if(!v) return;
+    if(vSel !== v.pinId) selectPin(v.pinId);
+    vEditing = id;
+    VF.vFormWrap.style.display = ''; VF.vHint.style.display = 'none';
+    VF['vf-store'].value = v.store; VF['vf-owner'].value = v.owner; VF['vf-phone'].value = v.phone;
+    VF['vf-type'].value = v.type; VF['vf-no'].value = v.no; VF['vf-date'].value = v.date;
+    VF['vf-lastInv'].value = v.lastInvoice; VF['vf-purchases'].value = v.purchases;
+    VF['vf-invoice'].value = v.invoice === null ? '' : v.invoice; VF['vf-address'].value = v.address; VF['vf-notes'].value = v.notes;
+    VF['vf-sync'].checked = false;
+    VF.vFormTitle.textContent = 'تعديل الزيارة رقم ' + v.no;
+    VF.vCancel.style.display = '';
+    VF.vSave.textContent = 'حفظ التعديل';
+    Array.prototype.forEach.call(VF.vBody.querySelectorAll('tr'), function(r){ r.classList.toggle('editing', r.dataset.id === String(id)); });
+    VF.vFormWrap.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+  function visibleVisits(){
+    return state.visits.filter(function(v){ return !vSel || v.pinId === vSel; }).sort(function(a, b){
+      var sa = (a.store || '').localeCompare(b.store || '', 'ar');
+      return sa || (a.no - b.no);
+    });
+  }
+  function renderVisits(){
+    var rows = visibleVisits();
+    VF.vBody.replaceChildren();
+    function td(text, cls){ return h('td', {class:cls || '', text:text}); }
+    rows.forEach(function(v){
+      var tr = h('tr', {'data-id':String(v.id)}, [
+        td(String(v.no), 'ltr'), td(v.date || '-', 'ltr'),
+        td(v.store || '-'), td(v.owner || '-'), td(v.phone || '-', 'ltr'),
+        td(typeLabel(v.type)), td(v.lastInvoice || '-', 'ltr'),
+        td(v.purchases || '-', 'wrap'), td(fmtUsd(v.invoice), 'ltr'), td(v.address || '-', 'wrap'), td(v.notes || '-', 'wrap'),
+        h('td', {class:'act vact'}, [
+          h('button', {class:'btn small', text:'تعديل', onclick:function(){ startEdit(v.id); }}),
+          ' ',
+          h('button', {class:'btn small danger', text:'حذف', onclick:function(){
+            ask('حذف الزيارة رقم ' + v.no + ' للمتجر "' + (v.store || '-') + '"؟', function(){
+              state.visits = state.visits.filter(function(x){ return x.id !== v.id; });
+              save(); renderVisits(); if(vEditing === v.id) resetForm(); else if(!vEditing) { var p = pinById(vSel); if(p) VF['vf-no'].value = nextVisitNo(p.id); }
+              renderPins(); refreshOpenPinPopup();
+            });
+          }})
+        ])
+      ]);
+      VF.vBody.appendChild(tr);
+    });
+    VF.vCount.textContent = 'عدد الزيارات: ' + rows.length;
+    VF.vEmpty.textContent = rows.length ? '' : 'لا توجد زيارات مسجّلة بعد.';
+  }
+  function syncPin(p, r){
+    if(r.store) p.store = r.store;
+    if(r.owner) p.owner = r.owner;
+    if(r.phone) p.phone = r.phone;
+    if(r.type) p.type = r.type;
+    if(r.lastInvoice) p.lastInvoice = r.lastInvoice;
+    if(r.purchases) p.purchases = r.purchases;
+    if(r.invoice !== null) p.invoice = r.invoice;
+    var mk = pinMarkers[p.id];
+    if(mk && mk.getElement()) mk.getElement().title = p.store || '';
+  }
+  VF.vForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    var p = pinById(vSel);
+    if(!p) return;
+    var no = parseInt(VF['vf-no'].value, 10);
+    if(!(no >= 1)){ say('أدخل رقم زيارة صحيح.'); return; }
+    var date = cleanDate(VF['vf-date'].value);
+    if(!date){ say('أدخل تاريخ الزيارة.'); return; }
+    if(visitsOf(p.id).some(function(v){ return v.no === no && v.id !== vEditing; })){ say('رقم الزيارة مستخدم مسبقاً لهذا المتجر.'); return; }
+    var rawInv = VF['vf-invoice'].value.trim();
+    var inv = cleanMoney(rawInv);
+    if(rawInv !== '' && inv === null){ say('قيمة الفاتورة غير صحيحة.'); return; }
+    var rec = {
+      pinId:p.id, no:no, date:date,
+      store:VF['vf-store'].value.trim().slice(0,200) || p.store, owner:VF['vf-owner'].value.trim().slice(0,200),
+      phone:VF['vf-phone'].value.trim().slice(0,60), type:VF['vf-type'].value,
+      lastInvoice:cleanDate(VF['vf-lastInv'].value), purchases:VF['vf-purchases'].value.trim().slice(0,1000),
+      invoice:inv, address:VF['vf-address'].value.trim().slice(0,300), notes:VF['vf-notes'].value.trim().slice(0,2000)
+    };
+    var editing = vEditing;
+    if(editing){
+      var v = findLocal('visits', editing);
+      if(v) Object.keys(rec).forEach(function(k){ v[k] = rec[k]; });
+    } else {
+      rec.id = newId();
+      state.visits.push(rec);
+    }
+    if(VF['vf-sync'].checked) syncPin(p, rec);
+    save(); renderVisits(); renderPins(); refreshOpenPinPopup(); resetForm();
+    vFlash(editing ? 'تم حفظ التعديل' : 'تمت إضافة الزيارة إلى الجدول');
+  });
+  VF.vCancel.addEventListener('click', resetForm);
+  VF.vPin.addEventListener('change', function(){ selectPin(VF.vPin.value || ''); });
+  VF.vBack.addEventListener('click', leaveVisits);
+  $('openVisitsAll').addEventListener('click', function(){ openVisits(''); });
+
+  /* ---------- main title ---------- */
+  var titleEl = $('mainTitle'), titleRow = $('titleRow'), titleBtn = $('editTitle');
+  function applyTitle(){
+    var t = state.title || DEFAULT_TITLE;
+    titleEl.textContent = t;
+    try{ document.title = t; }catch(e){}
+  }
+  function editTitle(){
+    var inp = h('input', {type:'text', maxlength:'120', 'aria-label':'العنوان الرئيسي'});
+    inp.value = state.title || DEFAULT_TITLE;
+    var done = false;
+    function finish(ok){
+      if(done) return; done = true;
+      if(ok){
+        var v = inp.value.trim().slice(0,120);
+        var nt = (v === DEFAULT_TITLE) ? '' : v;
+        if(nt !== state.title){ state.title = nt; save(); }
+      }
+      inp.remove(); titleEl.hidden = false; titleBtn.hidden = false; applyTitle();
+    }
+    titleEl.hidden = true; titleBtn.hidden = true;
+    titleRow.insertBefore(inp, titleEl);
+    inp.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){ e.preventDefault(); finish(true); }
+      else if(e.key === 'Escape'){ e.stopPropagation(); finish(false); }
+    });
+    inp.addEventListener('blur', function(){ finish(true); });
+    inp.focus(); inp.select();
+  }
+  titleBtn.addEventListener('click', editTitle);
+  titleEl.addEventListener('dblclick', editTitle);
+
+  /* ---------- tabs ---------- */
+  function selectTab(name){
+    Array.prototype.forEach.call(document.querySelectorAll('.tabs button'), function(b){ b.classList.toggle('on', b.dataset.tab === name); });
+    Array.prototype.forEach.call(document.querySelectorAll('section.tab'), function(s){ s.classList.toggle('on', s.id === 'tab-' + name); });
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.tabs button'), function(b){
+    b.addEventListener('click', function(){ selectTab(b.dataset.tab); });
+  });
+
+  /* ---------- dialogs, messages, files ---------- */
+  var dlgEl = $('dlg'), dlgMsg = $('dlgMsg'), dlgText = $('dlgText'), dlgBtns = $('dlgBtns'), sayEl = $('say'), sayT = null;
+  function closeDlg(){ dlgEl.hidden = true; }
+  function showData(msg, text, buttons){
+    dlgMsg.textContent = msg;
+    dlgText.hidden = (text === null);
+    if(text !== null) dlgText.value = text;
+    dlgBtns.replaceChildren();
+    buttons.forEach(function(b){
+      dlgBtns.appendChild(h('button', {type:'button', class:'btn' + (b.cls ? ' ' + b.cls : ''), text:b.text, onclick:function(){ b.fn(); }}));
+    });
+    dlgEl.hidden = false;
+    if(text === null && dlgBtns.firstChild) dlgBtns.firstChild.focus();
+    else if(text !== null) dlgText.focus();
+  }
+  function ask(msg, yes){
+    showData(msg, null, [
+      {text:'تأكيد', cls:'primary', fn:function(){ closeDlg(); yes(); }},
+      {text:'إلغاء', fn:closeDlg}
+    ]);
+  }
+  function say(msg){
+    sayEl.textContent = msg; sayEl.hidden = false;
+    clearTimeout(sayT);
+    sayT = setTimeout(function(){ sayEl.hidden = true; }, 4500);
+  }
+  function copyDlg(){
+    var t = dlgText.value;
+    function fb(){ dlgText.focus(); dlgText.select(); say('حدّد النص وانسخه بـ Ctrl+C'); }
+    try{ navigator.clipboard.writeText(t).then(function(){ say('تم النسخ'); }, fb); }catch(e){ fb(); }
+  }
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeDlg(); });
+  dlgEl.addEventListener('click', function(e){ if(e.target === dlgEl) closeDlg(); });
+
+  function saveFile(name, data, okMsg){
+    if(!dlApi){ say('حفظ الملفات غير متاح.'); return Promise.resolve(false); }
+    return dlApi.save({filename:name, data:data}).then(function(){ say((okMsg || 'تم الحفظ.') + (window.AndroidBridge ? ' (مجلد التنزيلات Downloads)' : '')); return true; }, function(e){
+      if(!e || e.code !== 'declined') say('تعذّر حفظ الملف.');
+      return false;
+    });
+  }
+
+  /* CSV */
+  function csvCell(x){
+    x = (x === null || x === undefined) ? '' : String(x);
+    if(/^[=+\-@\t\r]/.test(x)) x = "'" + x;
+    return '"' + x.replace(/"/g, '""') + '"';
+  }
+  function csvOf(head, rows){
+    return '﻿' + [head].concat(rows).map(function(r){ return r.map(csvCell).join(','); }).join('\r\n');
+  }
+  function visitsCsv(){
+    return csvOf(['رقم الزيارة','تاريخ الزيارة','اسم المتجر','صاحب المتجر','الرقم','نوع العميل','تاريخ آخر فاتورة','المشتريات','قيمة الفاتورة (USD)','العنوان','الملاحظات'],
+      visibleVisits().map(function(v){ return [v.no, v.date, v.store, v.owner, v.phone, v.type ? typeLabel(v.type) : '', v.lastInvoice, v.purchases, v.invoice === null ? '' : v.invoice, v.address, v.notes]; }));
+  }
+  function pinsCsv(){
+    return csvOf(['اسم المتجر','صاحب المتجر','الرقم','نوع العميل','تاريخ آخر فاتورة','المشتريات','قيمة الفاتورة (USD)','الملاحظات','خط العرض','خط الطول','المسافة عن المكتب (كم)'],
+      sortedPins().map(function(p){ return [p.store, p.owner, p.phone, p.type ? typeLabel(p.type) : '', p.lastInvoice, p.purchases, p.invoice === null ? '' : p.invoice, p.notes, p.lat.toFixed(6), p.lng.toFixed(6), (Math.round(distKm(p)*100)/100)]; }));
+  }
+  function exportCsv(text, filename){
+    if(dlApi) saveFile(filename, text, 'تم حفظ ملف CSV.');
+    else showData('انسخ النص ثم الصقه في Excel أو Google Sheets.', text, [{text:'نسخ', cls:'primary', fn:copyDlg}, {text:'إغلاق', fn:closeDlg}]);
+  }
+  VF.vCsv.addEventListener('click', function(){ exportCsv(visitsCsv(), 'visits.csv'); });
+  $('pinsCsv').addEventListener('click', function(){ exportCsv(pinsCsv(), 'stores.csv'); });
+  function sortedPins(){
+    return state.pins.filter(function(p){ return !p._new; }).sort(function(a,b){ return distKm(a) - distKm(b); });
+  }
+
+  /* backup / import */
+  function backupObject(){
+    return {version:2, title:state.title, bg:state.bg, circles:state.circles.map(function(c){ return Object.assign({id:c.id}, body(c)); }),
+      pins:state.pins.filter(function(p){ return !p._new; }).map(function(p){ return Object.assign({id:p.id}, body(p)); }),
+      visits:state.visits.map(function(v){ return Object.assign({id:v.id}, body(v)); })};
+  }
+  $('exportBtn').addEventListener('click', function(){
+    var text = JSON.stringify(backupObject(), null, 2);
+    var btns = [{text:'نسخ', cls:'primary', fn:copyDlg}];
+    if(dlApi) btns.push({text:'حفظ كملف', fn:function(){ saveFile('office-map-backup.json', dlgText.value, 'تم حفظ النسخة الاحتياطية.'); }});
+    btns.push({text:'إغلاق', fn:closeDlg});
+    showData('نسخة احتياطية من الدوائر والدبابيس والزيارات. احفظها كملف أو انسخها، ثم استوردها لاحقاً من زر «استيراد».', text, btns);
+  });
+  var importFile = $('importFile');
+  $('importBtn').addEventListener('click', function(){
+    showData('الصق نص النسخة الاحتياطية هنا، أو اختر ملف JSON، ثم اضغط «استيراد». سيتم استبدال البيانات الحالية في التطبيق.', '', [
+      {text:'استيراد', cls:'primary', fn:function(){ applyImport(dlgText.value); }},
+      {text:'اختيار ملف...', fn:function(){ importFile.click(); }},
+      {text:'إغلاق', fn:closeDlg}
+    ]);
+  });
+  importFile.addEventListener('change', function(){
+    var f = importFile.files[0]; if(!f) return;
+    var r = new FileReader();
+    r.onload = function(){ dlgText.value = String(r.result || ''); importFile.value = ''; };
+    r.readAsText(f);
+  });
+  function applyImport(text){
+    var ns;
+    try{ ns = sanitizeAll(JSON.parse(text)); }catch(e){ say('النص غير صالح. تأكد من نسخ النسخة الاحتياطية كاملة.'); return; }
+    closeDlg();
+    ask('استبدال البيانات الحالية بالبيانات المستوردة؟', function(){
+      clearCircleLayers();
+      Object.keys(pinMarkers).forEach(function(k){ map.removeLayer(pinMarkers[k]); });
+      pinMarkers = {};
+      state.title = ns.title; state.bg = ns.bg; state.circles = ns.circles; state.pins = ns.pins; state.visits = ns.visits;
+      drawAllCircles(); state.pins.forEach(drawPin); save(); renderCircles(); renderPins(); applyTitle(); applyBg(); leaveVisits();
+    });
+  }
+
+  /* ---------- PDF (drawn on canvas pages, saved through the downloads capability) ---------- */
+  var PW = 1684, PH = 1190, FONT = '"Segoe UI",Tahoma,"Noto Naskh Arabic",Arial,sans-serif', INK = '#1d2330', MUTED = '#667085';
+  var ARABIC = /[؀-ۿ]/;
+
+  function newPage(){
+    var c = document.createElement('canvas'); c.width = PW; c.height = PH;
+    var g = c.getContext('2d');
+    g.fillStyle = '#ffffff'; g.fillRect(0, 0, PW, PH);
+    g.textBaseline = 'middle';
+    return {c:c, g:g};
+  }
+  function txt(g, text, x, y, size, color, weight, align, forceDir){
+    text = String(text);
+    g.font = (weight || '400') + ' ' + size + 'px ' + FONT;
+    g.fillStyle = color || INK;
+    g.direction = forceDir || (ARABIC.test(text) ? 'rtl' : 'ltr');
+    g.textAlign = align || 'right';
+    g.fillText(text, x, y);
+  }
+  function wrap(g, text, maxW, size, maxLines){
+    g.font = '400 ' + size + 'px ' + FONT;
+    var words = String(text).split(/\s+/).filter(Boolean), lines = [], cur = '';
+    function push(){ if(cur){ lines.push(cur); cur = ''; } }
+    words.forEach(function(w){
+      var t = cur ? cur + ' ' + w : w;
+      if(g.measureText(t).width <= maxW){ cur = t; return; }
+      push();
+      if(g.measureText(w).width <= maxW){ cur = w; return; }
+      var piece = '';
+      for(var i=0;i<w.length;i++){
+        if(g.measureText(piece + w[i]).width > maxW){ lines.push(piece); piece = ''; }
+        piece += w[i];
+      }
+      cur = piece;
+    });
+    push();
+    if(!lines.length) lines.push('');
+    if(lines.length > maxLines){
+      lines = lines.slice(0, maxLines);
+      var last = lines[maxLines-1];
+      while(last.length > 1 && g.measureText(last + '…').width > maxW) last = last.slice(0, -1);
+      lines[maxLines-1] = last + '…';
+    }
+    return lines;
+  }
+  function loadImg(src){
+    return new Promise(function(res){
+      var im = new Image(); im.onload = function(){ res(im); }; im.onerror = function(){ res(null); }; im.src = src;
+    });
+  }
+
+  function mapPage(bgImg){
+    var pg = newPage(), g = pg.g;
+    txt(g, state.title || DEFAULT_TITLE, PW - 50, 58, 42, INK, '700');
+    txt(g, 'موقع المكتب: 33°31\'26.4"N 36°17\'48.8"E   |   ' + todayStr(), PW - 50, 104, 22, MUTED, '400', 'right', 'ltr');
+    var mx = 50, my = 140, S = 1000;
+    // extent in km relative to the office
+    function rel(lat, lng){ return [(lng - OFFICE[1]) * KM_LNG, (lat - OFFICE[0]) * KM_LAT]; }
+    var xs = [0], ys = [0];
+    state.circles.forEach(function(c){
+      if(!c.visible) return;
+      var cc = c.center ? rel(c.center[0], c.center[1]) : [0, 0];
+      xs.push(cc[0] - c.km, cc[0] + c.km); ys.push(cc[1] - c.km, cc[1] + c.km);
+    });
+    var pins = sortedPins();
+    pins.forEach(function(p){ var r = rel(p.lat, p.lng); xs.push(r[0]); ys.push(r[1]); });
+    var minx = Math.min.apply(null, xs), maxx = Math.max.apply(null, xs), miny = Math.min.apply(null, ys), maxy = Math.max.apply(null, ys);
+    var span = Math.max(maxx - minx, maxy - miny, 1) * 1.06;
+    minx = (minx + maxx) / 2 - span / 2; miny = (miny + maxy) / 2 - span / 2;
+    var sc = S / span;
+    function px(x, y){ return [mx + (x - minx) * sc, my + S - (y - miny) * sc]; }
+
+    g.save();
+    g.beginPath(); g.rect(mx, my, S, S); g.clip();
+    g.fillStyle = '#eef1f5'; g.fillRect(mx, my, S, S);
+    if(bgImg && state.bg){
+      var b = state.bg;
+      var tl = px(b.ox - b.w / 2, b.oy + b.w * b.ar / 2), br = px(b.ox + b.w / 2, b.oy - b.w * b.ar / 2);
+      g.globalAlpha = b.op; g.drawImage(bgImg, tl[0], tl[1], br[0] - tl[0], br[1] - tl[1]); g.globalAlpha = 1;
+    }
+    var steps = [0.5, 1, 2, 5, 10, 20, 50], step = steps[steps.length-1];
+    for(var i=0;i<steps.length;i++){ if(span / steps[i] <= 14){ step = steps[i]; break; } }
+    g.strokeStyle = bgImg ? 'rgba(80,90,110,.18)' : '#d3d9e2'; g.lineWidth = 1;
+    for(var gx = Math.ceil(minx / step) * step; gx <= minx + span; gx += step){ var a = px(gx, miny), bb = px(gx, miny + span); g.beginPath(); g.moveTo(a[0], a[1]); g.lineTo(bb[0], bb[1]); g.stroke(); }
+    for(var gy = Math.ceil(miny / step) * step; gy <= miny + span; gy += step){ var a2 = px(minx, gy), b2 = px(minx + span, gy); g.beginPath(); g.moveTo(a2[0], a2[1]); g.lineTo(b2[0], b2[1]); g.stroke(); }
+    // circles
+    var labels = [];
+    state.circles.slice().sort(function(a, b){ return b.km - a.km; }).forEach(function(c){
+      if(!c.visible) return;
+      var cc = c.center ? rel(c.center[0], c.center[1]) : [0, 0], p = px(cc[0], cc[1]);
+      g.beginPath(); g.arc(p[0], p[1], c.km * sc, 0, Math.PI * 2);
+      g.globalAlpha = c.fillOpacity; g.fillStyle = c.color; g.fill(); g.globalAlpha = 1;
+      g.strokeStyle = c.color; g.lineWidth = Math.max(2, c.weight * 1.6);
+      g.setLineDash(c.dashed ? [16, 10] : []); g.stroke(); g.setLineDash([]);
+      labels.push({x:p[0], y:p[1] - c.km * sc, t:(c.name ? c.name + ' · ' : '') + fmtKm(c.km) + ' km', color:c.color});
+    });
+    labels.forEach(function(l){
+      g.font = '700 19px ' + FONT; g.direction = 'ltr';
+      var w = g.measureText(l.t).width + 18;
+      g.fillStyle = '#fff'; g.strokeStyle = l.color; g.lineWidth = 2;
+      g.beginPath(); g.roundRect ? g.roundRect(l.x - w/2, l.y - 14, w, 28, 14) : g.rect(l.x - w/2, l.y - 14, w, 28); g.fill(); g.stroke();
+      txt(g, l.t, l.x, l.y + 1, 19, l.color, '700', 'center', 'ltr');
+    });
+    // office
+    var o = px(0, 0);
+    g.beginPath();
+    for(var k=0;k<10;k++){ var r = k % 2 ? 9 : 20, ang = -Math.PI/2 + k * Math.PI / 5; g.lineTo(o[0] + r * Math.cos(ang), o[1] + r * Math.sin(ang)); }
+    g.closePath(); g.fillStyle = '#ffd60a'; g.fill(); g.strokeStyle = '#111'; g.lineWidth = 3; g.stroke();
+    // pins
+    pins.forEach(function(p, i){
+      var r = rel(p.lat, p.lng), q = px(r[0], r[1]);
+      g.beginPath(); g.arc(q[0], q[1], 17, 0, Math.PI * 2); g.fillStyle = '#d62828'; g.fill(); g.strokeStyle = '#fff'; g.lineWidth = 3; g.stroke();
+      txt(g, String(i + 1), q[0], q[1] + 1, i > 98 ? 13 : 17, '#fff', '700', 'center', 'ltr');
+    });
+    // scale bar
+    var bar = step >= 1 ? step : 0.5; if(bar * sc > 300) bar = bar / 2;
+    g.fillStyle = 'rgba(255,255,255,.85)'; g.fillRect(mx + 14, my + S - 54, bar * sc + 28, 40);
+    g.fillStyle = '#222'; g.fillRect(mx + 28, my + S - 30, bar * sc, 5);
+    txt(g, fmtKm(bar) + ' km', mx + 28 + bar * sc / 2, my + S - 42, 17, '#222', '600', 'center', 'ltr');
+    // north arrow
+    g.fillStyle = '#222'; g.beginPath(); g.moveTo(mx + S - 40, my + 24); g.lineTo(mx + S - 52, my + 62); g.lineTo(mx + S - 28, my + 62); g.closePath(); g.fill();
+    txt(g, 'N', mx + S - 40, my + 82, 22, '#222', '700', 'center', 'ltr');
+    g.restore();
+    g.strokeStyle = '#9aa3b2'; g.lineWidth = 2; g.strokeRect(mx, my, S, S);
+
+    // right panel
+    var rx = PW - 50, ry = 160;
+    txt(g, 'الدوائر', rx, ry, 30, INK, '700'); ry += 44;
+    var rings = state.circles.filter(function(c){ return c.visible; }).sort(function(a, b){ return a.km - b.km; });
+    rings.slice(0, 12).forEach(function(c){
+      g.beginPath(); g.arc(rx - 12, ry, 11, 0, Math.PI * 2); g.fillStyle = c.color; g.fill();
+      txt(g, (c.name ? c.name + ' · ' : '') + fmtKm(c.km) + ' كم' + (c.center ? ' (مركز مخصص)' : ''), rx - 36, ry + 1, 22, INK, '400'); ry += 34;
+    });
+    if(rings.length > 12){ txt(g, '… و ' + (rings.length - 12) + ' دوائر أخرى', rx - 36, ry, 20, MUTED); ry += 34; }
+    ry += 18;
+    txt(g, 'المتاجر (' + pins.length + ')', rx, ry, 30, INK, '700'); ry += 44;
+    var cap = Math.max(0, Math.floor((PH - 70 - ry) / 32));
+    pins.slice(0, pins.length > cap ? Math.max(cap - 1, 0) : pins.length).forEach(function(p, i){
+      var line = (i + 1) + '. ' + (p.store || '(بدون اسم)'), dist = (Math.round(distKm(p) * 10) / 10) + ' km';
+      g.font = '400 21px ' + FONT;
+      while(line.length > 4 && g.measureText(line).width > 330) line = line.slice(0, -2) + '…';
+      txt(g, line, rx, ry, 21, INK, '400');
+      txt(g, dist, rx - 420, ry, 19, MUTED, '400', 'right', 'ltr'); ry += 32;
+    });
+    if(pins.length > cap && cap > 0) txt(g, '… و ' + (pins.length - cap + 1) + ' متجراً آخر (في الجداول التالية)', rx, ry, 20, MUTED);
+    return pg;
+  }
+
+  function tablePages(title, cols, rows){
+    var pages = [], W = PW - 100, pad = 12, lineH = 29, size = 21, top = 150, bottom = PH - 60;
+    var pg = null, g = null, y = 0, first = true;
+    function header(){
+      pg = newPage(); g = pg.g; pages.push(pg);
+      txt(g, title + (first ? '' : ' (تابع)'), PW - 50, 62, 36, INK, '700');
+      first = false;
+      y = top;
+      g.fillStyle = '#eaeef5'; g.fillRect(50, y - 8, W, 52);
+      var rx = PW - 50;
+      cols.forEach(function(c){ var cw = c.w * W; txt(g, c.h, rx - pad, y + 18, 20, INK, '700'); rx -= cw; });
+      y += 52;
+    }
+    header();
+    if(!rows.length){ txt(g, 'لا توجد بيانات.', PW - 60, y + 40, 24, MUTED); return pages; }
+    rows.forEach(function(row){
+      var cells = row.map(function(v, i){ return wrap(g, v === null || v === undefined || v === '' ? '-' : v, cols[i].w * W - pad * 2, size, 3); });
+      var lines = Math.max.apply(null, cells.map(function(c){ return c.length; }));
+      var rh = lines * lineH + 16;
+      if(y + rh > bottom){ header(); }
+      var rx = PW - 50;
+      cols.forEach(function(c, i){
+        var cw = c.w * W;
+        cells[i].forEach(function(line, li){ txt(g, line, rx - pad, y + 8 + lineH / 2 + li * lineH, size, INK, '400'); });
+        rx -= cw;
+      });
+      g.strokeStyle = '#d9dee6'; g.lineWidth = 1; g.beginPath(); g.moveTo(50, y + rh); g.lineTo(PW - 50, y + rh); g.stroke();
+      y += rh;
+    });
+    return pages;
+  }
+
+  function pinsTable(){
+    return tablePages('المتاجر',
+      [{h:'#',w:.04},{h:'اسم المتجر',w:.18},{h:'صاحب المتجر',w:.13},{h:'الرقم',w:.12},{h:'نوع العميل',w:.08},{h:'تاريخ آخر فاتورة',w:.10},{h:'المشتريات',w:.15},{h:'قيمة الفاتورة (USD)',w:.10},{h:'المسافة (كم)',w:.10}],
+      sortedPins().map(function(p, i){ return [String(i + 1), p.store, p.owner, p.phone, p.type ? typeLabel(p.type) : '', p.lastInvoice, p.purchases, p.invoice === null ? '' : fmtUsd(p.invoice), String(Math.round(distKm(p) * 10) / 10)]; }));
+  }
+  function visitsTable(titleSuffix){
+    return tablePages('سجل الزيارات' + (titleSuffix ? ' - ' + titleSuffix : ''),
+      [{h:'رقم الزيارة',w:.05},{h:'تاريخ الزيارة',w:.08},{h:'اسم المتجر',w:.12},{h:'صاحب المتجر',w:.10},{h:'الرقم',w:.10},{h:'نوع العميل',w:.07},{h:'تاريخ آخر فاتورة',w:.08},{h:'المشتريات',w:.13},{h:'قيمة الفاتورة (USD)',w:.08},{h:'العنوان',w:.10},{h:'الملاحظات',w:.09}],
+      visibleVisits().map(function(v){ return [String(v.no), v.date, v.store, v.owner, v.phone, v.type ? typeLabel(v.type) : '', v.lastInvoice, v.purchases, v.invoice === null ? '' : fmtUsd(v.invoice), v.address, v.notes]; }));
+  }
+
+  function jpegBytes(canvas){
+    return new Promise(function(res, rej){
+      canvas.toBlob(function(b){
+        if(!b){ rej(new Error('jpeg')); return; }
+        b.arrayBuffer().then(function(ab){ res({w:canvas.width, h:canvas.height, bytes:new Uint8Array(ab)}); }, rej);
+      }, 'image/jpeg', 0.92);
+    });
+  }
+  function pdfFromJpegs(imgs, wpt, hpt){
+    var enc = new TextEncoder(), chunks = [], offs = [], pos = 0, n = imgs.length;
+    function add(x){ var b = (typeof x === 'string') ? enc.encode(x) : x; chunks.push(b); pos += b.length; }
+    function obj(i, fn){ offs[i] = pos; add(i + ' 0 obj\n'); fn(); add('\nendobj\n'); }
+    add('%PDF-1.4\n');
+    obj(1, function(){ add('<< /Type /Catalog /Pages 2 0 R >>'); });
+    var kids = []; for(var i=0;i<n;i++) kids.push((3 + i * 3) + ' 0 R');
+    obj(2, function(){ add('<< /Type /Pages /Kids [' + kids.join(' ') + '] /Count ' + n + ' >>'); });
+    imgs.forEach(function(im, i){
+      var p = 3 + i * 3, cs = 'q ' + wpt + ' 0 0 ' + hpt + ' 0 0 cm /Im0 Do Q';
+      obj(p, function(){ add('<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ' + wpt + ' ' + hpt + '] /Resources << /XObject << /Im0 ' + (p + 2) + ' 0 R >> >> /Contents ' + (p + 1) + ' 0 R >>'); });
+      obj(p + 1, function(){ add('<< /Length ' + cs.length + ' >>\nstream\n' + cs + '\nendstream'); });
+      obj(p + 2, function(){
+        add('<< /Type /XObject /Subtype /Image /Width ' + im.w + ' /Height ' + im.h + ' /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ' + im.bytes.length + ' >>\nstream\n');
+        add(im.bytes); add('\nendstream');
+      });
+    });
+    var total = 3 + n * 3, xref = pos, x = 'xref\n0 ' + total + '\n0000000000 65535 f \n';
+    for(var k=1;k<total;k++) x += ('0000000000' + offs[k]).slice(-10) + ' 00000 n \n';
+    add(x + 'trailer\n<< /Size ' + total + ' /Root 1 0 R >>\nstartxref\n' + xref + '\n%%EOF');
+    return new Blob(chunks, {type:'application/pdf'});
+  }
+
+  var pdfBusy = false;
+  function makePdf(kind){
+    if(pdfBusy) return;
+    if(!dlApi){ say('حفظ الملفات غير متاح.'); return; }
+    pdfBusy = true; say('جارٍ إنشاء ملف PDF...');
+    var prep = kind === 'visits'
+      ? Promise.resolve(visitsTable(vSel && pinById(vSel) ? pinById(vSel).store : ''))
+      : (state.bg ? loadImg(window.__blobUrl(state.bg.id)) : Promise.resolve(null)).then(function(bgImg){
+          return [mapPage(bgImg)].concat(pinsTable(), state.visits.length ? visitsTable('') : []);
+        });
+    prep.then(function(pages){
+      return Promise.all(pages.map(function(p){ return jpegBytes(p.c); }));
+    }).then(function(imgs){
+      var blob = pdfFromJpegs(imgs, 842, 595);
+      return saveFile(kind === 'visits' ? 'visits.pdf' : 'office-map.pdf', blob, 'تم حفظ PDF. افتحه ثم اطبعه من عارض PDF إن أردت.');
+    }).catch(function(){ say('تعذّر إنشاء ملف PDF.'); }).then(function(){ pdfBusy = false; });
+  }
+  $('pdfBtn').addEventListener('click', function(){ makePdf('full'); });
+  VF.vPdf.addEventListener('click', function(){ makePdf('visits'); });
+
+  /* ---------- search + my location ---------- */
+  var srchIn = $('srchIn'), srchRes = $('srchRes'), foundMk = null, meLayer = null;
+  function showFound(lat, lng, label){
+    if(foundMk) map.removeLayer(foundMk);
+    foundMk = L.circleMarker([lat, lng], {radius:9, color:'#fff', weight:3, fillColor:'#1f6feb', fillOpacity:1}).addTo(map);
+    foundMk.bindPopup(h('div', {text:label, style:'direction:rtl;max-width:220px'}));
+    map.setView([lat, lng], Math.max(map.getZoom(), 16));
+    foundMk.openPopup();
+  }
+  function srchMsg(t){ srchRes.replaceChildren(h('div', {class:'msg', text:t})); srchRes.hidden = false; }
+  function doSearch(){
+    var q = srchIn.value.trim(); if(!q) return;
+    var m = q.match(/^(-?\d+(?:\.\d+)?)\s*[,\u060c\s]\s*(-?\d+(?:\.\d+)?)$/);
+    if(m && Math.abs(+m[1]) <= 90 && Math.abs(+m[2]) <= 180){ srchRes.hidden = true; showFound(+m[1], +m[2], q); return; }
+    srchMsg('جارٍ البحث...');
+    fetch('https://nominatim.openstreetmap.org/search?format=jsonv2&limit=6&accept-language=ar&viewbox=34.8,35.0,37.8,32.0&q=' + encodeURIComponent(q))
+      .then(function(r){ if(!r.ok) throw new Error('http'); return r.json(); })
+      .then(function(list){
+        if(!list.length){ srchMsg('لا توجد نتائج.'); return; }
+        srchRes.replaceChildren();
+        list.forEach(function(r){
+          srchRes.appendChild(h('div', {text:r.display_name, onclick:function(){ srchRes.hidden = true; showFound(+r.lat, +r.lon, r.display_name); }}));
+        });
+      })
+      .catch(function(){ srchMsg('تعذّر البحث. تحقق من اتصال الإنترنت.'); });
+  }
+  $('srchGo').addEventListener('click', doSearch);
+  srchIn.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ e.preventDefault(); doSearch(); } else if(e.key === 'Escape'){ srchRes.hidden = true; } });
+  $('locBtn').addEventListener('click', function(){
+    if(!navigator.geolocation){ say('تحديد الموقع غير مدعوم.'); return; }
+    say('جارٍ تحديد موقعك...');
+    navigator.geolocation.getCurrentPosition(function(pos){
+      var c = pos.coords;
+      if(meLayer) map.removeLayer(meLayer);
+      meLayer = L.layerGroup([
+        L.circle([c.latitude, c.longitude], {radius:Math.max(c.accuracy || 20, 10), color:'#1f6feb', weight:1, fillColor:'#1f6feb', fillOpacity:.12, interactive:false}),
+        L.circleMarker([c.latitude, c.longitude], {radius:8, color:'#fff', weight:3, fillColor:'#1f6feb', fillOpacity:1})
+      ]).addTo(map);
+      map.setView([c.latitude, c.longitude], Math.max(map.getZoom(), 16));
+      say('موقعك يبعد عن المكتب ' + (Math.round(L.latLng(OFFICE).distanceTo(L.latLng(c.latitude, c.longitude)) / 100) / 10) + ' كم');
+    }, function(err){
+      say(err && err.code === 1 ? 'تم رفض إذن الموقع. فعّله من إعدادات التطبيق.' : 'تعذّر تحديد الموقع. تأكد من تشغيل GPS.');
+    }, {enableHighAccuracy:true, timeout:20000, maximumAge:10000});
+  });
+
+  /* ---------- start ---------- */
+  applyTitle();
+  renderCircles(); renderPins();
+  refreshBgPanel();
+  setSync('loading');
+  setTimeout(function(){ map.invalidateSize(); }, 300);
+  window.addEventListener('load', function(){ map.invalidateSize(); });
+
+  function goLocal(){
+    db = null; setSync('local');
+    state.circles = defaultCircles(); ready = true;
+    drawAllCircles(); renderCircles(); fitToCircles();
+  }
+  function cap(name){
+    if(!window.claude || !window.claude.use) return Promise.resolve(null);
+    return window.claude.use(name).catch(function(){ return null; });
+  }
+  Promise.all([cap('db'), cap('user'), cap('downloads'), cap('assets')]).then(function(r){
+    db = r[0]; dlApi = r[2]; assetsApi = r[3];
+    var user = r[1];
+    function finish(allowed){
+      canWrite = allowed !== false;
+      if(!db){ goLocal(); return; }
+      startSync();
+    }
+    if(user && user.can) user.can('data.write').then(finish, function(){ finish(null); });
+    else finish(null);
+    if(!dlApi){ $('pdfBtn').hidden = true; VF.vPdf.hidden = true; }
+    refreshBgPanel();
+  });
+})();
+</script>
+
+</body></html>

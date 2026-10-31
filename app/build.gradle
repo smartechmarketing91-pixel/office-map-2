@@ -1,0 +1,25 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'com.officemap.app'
+    compileSdk 34
+    defaultConfig {
+        applicationId 'com.officemap.app'
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName '1.0'
+    }
+    signingConfigs {
+        main {
+            storeFile file('../officemap.jks')
+            storePassword 'officemap123'
+            keyAlias 'officemap'
+            keyPassword 'officemap123'
+        }
+    }
+    buildTypes {
+        release { signingConfig signingConfigs.main; minifyEnabled false }
+        debug { signingConfig signingConfigs.main }
+    }
+}
+dependencies { implementation 'androidx.webkit:webkit:1.11.0' }
